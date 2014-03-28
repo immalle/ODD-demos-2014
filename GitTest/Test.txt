@@ -1,6 +1,11 @@
 Voeg allemaal enkele regeltjes toe aan dit bestandje of verander enkele letters...
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 I want to be the very best.
 =======
 Git pushing.
 >>>>>>> 65dc96284d50ed007c1d3a3853d80d1447416f44
+=======
+
+hallo
+>>>>>>> Stashed changes
