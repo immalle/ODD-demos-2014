@@ -1,5 +1,6 @@
 Voeg allemaal enkele regeltjes toe aan dit bestandje of verander enkele letters...
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 I want to be the very best.
 =======
@@ -8,4 +9,8 @@ Git pushing.
 =======
 
 hallo
+>>>>>>> Stashed changes
+=======
+Git pushing.
+Xentr says hi
 >>>>>>> Stashed changes
