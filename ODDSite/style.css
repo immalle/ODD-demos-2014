@@ -7,9 +7,22 @@ font-size: 0.8em;
 max-width: 90%;
 margin: 0 auto;
 margin-bottom: 13px;
-border-top: solid 13px #FF3300;
+border-top: solid 15px #FF3300;
 border-bottom: solid 5px #FF3300;
 }
+
+a
+{
+text-decoration: none;
+color:rgb(162,192,15);
+transition:all .25s ease;
+}
+
+a:hover
+{
+opacity:0.6;
+}
+
 
 header
 {
@@ -22,7 +35,7 @@ header img.bottom
 vertical-align:baseline;
 }
 
-.right
+header .right
 {
 text-align:right;
 vertical-align:bottom;
@@ -101,7 +114,7 @@ position:relative;
 padding-left: 30px;
 }
 
-#links_inner{
+#sidebar{
 	width:4%;
 	position:fixed;
 	top:150px;
