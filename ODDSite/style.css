@@ -109,6 +109,17 @@ padding: 10px;
 position:relative;
 }
 
+.boxcontent table.center
+{
+margin-left:auto; 
+margin-right:auto;
+}
+
+.boxcontent table td
+{
+width: 400px;
+}
+
 .boxcontent p
 {
 padding-left: 30px;
