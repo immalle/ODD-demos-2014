@@ -1,0 +1,154 @@
+﻿body
+{
+background-image:url( 'Afbeeldingen/ICY.GIF');
+}
+#boven
+{
+    background-color:#B9F1FA;
+    height:70px;
+    font-family:Verdana;
+}
+#boven img
+{
+float:left;
+padding-right:50px;
+}
+#boven h1
+{
+    font-family:Verdana;
+    font-size:20px;
+    color:Blue;
+}
+#boven h2
+{
+    font-family:Verdana;
+    font-size:16px;
+    color:green;
+    font-style:oblique;
+}
+
+#navigatie a
+{
+  margin-top:70px;
+  text-decoration:none;
+  color:Black;
+  }
+  
+#navigatie ul
+{
+    list-style-type:square;
+    background-color:#B9F1FA;
+    width:150px;
+    height:200px;
+    text-align:left;
+    border-style:solid;
+    border-width:3px;
+    border-color:#7A9BA0;
+    float:left;
+    margin-left:15px;
+    margin-top:150px;
+    margin-bottom:100px;
+    margin-right:25px;
+    font-family:MS Sans Serif;
+    display: block;
+}
+#navigatie a:hover
+{
+color:White;
+font-style:italic;
+text-decoration:none;
+}
+
+#inhoud
+{
+    margin-left:240px;
+    margin-top:10px;
+    height:auto;
+    width:auto;
+    float:none;
+    padding-bottom:50px;
+    font-family:MS Sans Serif;
+}
+#inhoud img
+{
+    padding-left:150px;
+    padding-bottom:50px;
+    padding-top:50px;
+}
+
+#inhoud h1
+{   
+    text-decoration:underline;
+    font-family:Footlight MT Light;
+    font-size:45px;
+    text-decoration:underline;
+}
+#inhoud h3
+{   
+    text-decoration:underline;
+    font-size:larger;
+    font-weight:bold;
+}
+
+#inhoud p1
+{
+    text-decoration:underline;
+    font-size:large;
+    font-weight:bold;
+}
+#inhoud p2
+{
+    margin-left:130px;
+    text-decoration:underline;
+    font-size:large;
+    font-weight:bold;
+}
+#inhoud p3
+{
+    font-weight:bold;
+}
+#inhoud ul
+{
+    list-style-type:square;
+    margin-left:110px;
+    
+}
+#inhoud td
+{
+    width:300px;
+    font-weight:bold;
+    text-align:left;
+}
+#Scholen ul
+{
+    width: 700px;
+    height:auto;
+    background-color:#B9F1FA;
+    padding: 3px;
+    border: 2px solid;
+    border-color:#7A9BA0;
+    text-align:center;
+    list-style-type:none;
+    word-spacing:15px;
+    text-decoration:none;
+}
+#Scholen a
+{
+  text-decoration:none;
+  color:Black;
+  }
+#Scholen a:hover
+{
+    color:red;
+    font-style:italic;
+    text-decoration:none;
+}
+
+#voet
+{
+    clear:both;
+    font-family:Times New Roman;
+    text-align:center;
+}   
+    
+

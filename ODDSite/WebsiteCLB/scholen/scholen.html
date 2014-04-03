@@ -1,0 +1,348 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/clb.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('div.scholen> div').hide();
+            $('div.scholen> h3').click(function () {
+                $(this).next('div')
+                    .slideToggle('fast')
+                    .siblings('div:visible').slideUp('fast');
+    });  
+  
+});  
+$(document).ready(function(){  
+  
+    $("ul.subnav").parent().append("<span></span>"); //Only shows drop down trigger when js is enabled (Adds empty span tag after ul.subnav*)  
+  
+    $("ul.topnav li div").hover(function() { //When trigger is clicked...  
+  
+        //Following events are applied to the subnav itself (moving subnav up and down)  
+        $(this).parent().find("ul.subnav").slideDown('fast').show(); //Drop down the subnav on click  
+  
+        $(this).parent().hover(function() {  
+        }, function(){  
+            $(this).parent().find("ul.subnav").slideUp('fast'); //When the mouse hovers out of the subnav, move it back up  
+        });  
+  
+        //Following events are applied to the trigger (Hover events for the trigger)  
+        }).hover(function() {  
+            $(this).addClass("subhover"); //On hover over, add class "subhover"  
+        }, function(){  //On Hover Out  
+            $(this).removeClass("subhover"); //On hover out, remove class "subhover"  
+    });  
+  
+});  
+    </script>
+<title></title>
+</head>
+<body>
+        <div id="container">
+        <div id="boven">
+
+            <a href="../index.html">
+            <img src="../images/clblogo.gif" alt="CLB" align="left" height="100" width="200"/>
+            </a>
+            <h1>VCLB-1 Antwerpen Middengebied</h1>
+            <p><i>Vrij Centrum voor Leerlingenbegeleiding</i></p>
+        </div>
+        <div id="navigatie">
+
+<ul class="topnav">  
+    <li><a href="../index.html">Home</a></li>  
+    <li>
+    <div>  
+        <a href="../werking.html">Werking</a>  
+        <ul class="subnav">  
+            <li><a href="../kansen.html">Kansenbevordering</a></li>  
+            <li><a href="../woord.html">CLB in woord en beeld</a></li>
+
+            <li><a href="../links.html">Interessante links</a></li>  
+        </ul>
+       </div>  
+    </li>   
+    <li>
+     <div>
+     <a href="scholen.html">Scholen en teams</a>        
+        <ul class="subnav">  
+            <li><a href="scholen.html">Scholen</a></li>  
+            <li><a href="../regionaal/scholen.html">Regionale scholen</a></li>
+
+            <li><a href="../personeel/personeel.html">Personeel</a></li>  
+        </ul>
+      </div> 
+     </li>  
+    <li><a href="../vacatures.html">Vacatures</a></li>  
+</ul>
+
+<ul class="schoolnav">  
+            <li><a href="brecht.html">Brecht</a></li>  
+            <li><a href="grobbendonk.html">Grobbendonk</a></li>
+            <li><a href="lille.html">Lille</a></li>
+
+            <li><a href="malle.html">Malle</a></li>
+            <li><a href="nijlen.html">Nijlen</a></li>
+            <li><a href="ranst.html">Ranst</a></li>
+            <li><a href="vorselaar.html">Vorselaar</a></li>
+            <li><a href="zandhoven.html">Zandhoven</a></li>
+            <li><a href="zoersel.html">Zoersel</a></li>  
+        </ul>  
+        </div>
+
+        <div id="inhoud">
+            <div class="scholen">
+                <h3>Brecht</h3>
+                <div>
+                <table border="1">
+            <tr>
+            <th>School</th>
+            <th>CLB-Team</th>
+
+            <th>Vestigingsplaats</th>
+            </tr>
+            <tr>
+            <td>Gesubsidieerde Vrije Kleuterschool<br />
+
+            (De Zevensprong)<br />
+                Venusstraat 5<br />
+
+                2960 BRECHT<br />
+                Tel. 03 360 07 70<br />
+             <a href="http://www.de7sprong.be/" target="_blank">www.de7sprong.be</a></td>
+            <td>Contactpersoon:<br />
+
+            Marleen Van Elsacker (PPC)<br />
+                Teamgenoten:<br />
+
+                Ineke Verbruggen(MW)<br />
+                Karen Van Doorslaer (Arts)<br />
+                Ingrid De Donder (PMW)</td>
+            <td>Zoersel</td>
+
+            </tr>
+            <tr>
+
+                    <td>Gemeentelijke Basisscholen Brecht<br />
+                        (De Sleutelbloem)<br />
+                        Schoolplein 2<br />
+                        2960 BRECHT<br />
+                        Tel. 03 313 81 63<br />
+                        <a href="http://www.desleutelbloem.be/" target="_blank">www.desleutelbloem.be</a></td>
+
+                    <td>Contactpersoon:<br />
+                        Inge Levens (PPW)<br />
+                        Teamgenoten:<br />
+                        Marieke De Rijdt (MW)<br />
+
+                        Karen Van Doorslaer (Arts)<br />
+                        Ingrid De Donder (PMW)</td>
+
+                    <td>Zoersel</td>
+
+               </tr>
+               <tr>
+                    <td>Scholengroep Klavertje 3 Overbroek<br />
+
+                        (KO en 1ste en 2de leerjaar)<br />
+                        St. Willibrordusstraat 29<br />
+
+                        Tel. 03 660 07 70<br />
+                        <a href="http://www.klavertjedrie.be/" target="_blank">www.klavertjedrie.be</a></td>
+
+                    <td>Contactpersoon:<br />
+                        Marleen Van Elsacker (PPC)<br />
+
+                        Teamgenoten:<br />
+
+                        Ineke Verbruggen (MW)<br />
+                        Karen Van Doorslaer (Arts)<br />
+                        Ingrid De Donder (PMW)</td>
+
+                    <td>Zoersel</td>
+               </tr>
+
+               <tr>
+
+                    <td>Scholengroep Klavertje 3 Overbroek<br />
+                        (3de, 4de, 5de, 6de leerjaar)<br />
+                        St. Willibrordusstraat 60<br />
+                        2960 BRECHT<br />
+
+                        Tel. 03 660 07 70<br />
+
+                        <a href="http://www.klavertjedrie.be/" target="_blank">www.klavertjedrie.be</a></td>
+                    <td>Contactpersoon:<br />
+                        Inge Levens (PPW)<br />
+                        Teamgenoten:<br />
+                        Marieke De Rijdt (MW)<br />
+
+                        Karen Van Doorslaer (Arts)<br />
+
+                        Ingrid De Donder (PMW)</td>
+                    <td>Zoersel</td>
+                 </table>
+                </div>
+                <hr />
+                <h3>St.-Lenaarts</h3>
+                <div>
+
+                <table border="1">
+            <tr>
+
+            <th>School</th>
+
+            <th>CLB-Team</th>
+            <th>Vestigingsplaats</th>
+            </tr>
+
+                  <td>Gesubsidieerde Vrije Basisschool<br />
+                        (Leonardusschool)<br />
+                        Dorpsstraat 12<br />
+                        2960 St. Lenaerts<br />
+                        Tel. 03 313 03 20<br />
+                        <a href="http://www.leonardusschool.be/" target="_blank">www.leonardusschool.be</a></td>
+
+                    <td>Contactpersoon:<br />
+                        Inge Levens (PPW)<br />
+
+                        Teamgenoten:<br />
+                        Els Verbreuken (MW)<br />
+                        Karen Van Doorslaer (Arts)<br />
+
+                        Sofie Claes (PMW)</td>
+                    <td>Zoersel</td>
+               </tr>
+
+               <tr>
+                    <td>Gemeentelijke Basisscholen Brecht<br />
+                        (De Schakel)<br />
+
+                        Kerkstraat 1<br />
+
+                        2960 St. Lenaerts<br />
+                        Tel. 03 313 98 62<br />
+
+                        <a href="http://www.gbs-deschakel.be/" target="_blank">www.gbs-deschakel.be</a></td>
+                    <td>Contactpersoon:<br />
+
+                        Marleen Van Elsacker (PPC)<br />
+                        Teamgenoten: <br />
+                        Inge Wouters (MW)<br />
+                        Karen Van Doorslaer (Arts)<br />
+                        Sofie Claes (PMW)</td>
+                    <td>Zoersel</td>
+
+               </tr>
+            </table>
+                </div>
+                <hr />
+                <h3>St.-Job in-'t Goor</h3>
+                <div>
+                            <table border="1">
+            <tr>
+
+            <th>School</th>
+            <th>CLB-Team</th>
+            <th>Vestigingsplaats</th>
+            </tr>
+                           <tr>
+
+                    <td>Gesubsidieerde Vrije Basisschool<br />
+
+                        (Maria Middelares 1+2)<br />
+
+                        Hogebaan 2<br />
+                        2960 St.-Job-in-'t Goor<br />
+                        Tel. 03 636 12 29<br />
+
+                        <a href="http://www.maria-middelares.be/" target="_blank">www.maria-middelares.be</a></td>
+
+                    <td>Contactpersoon:<br />
+                        Silke Van der Cruyssen (PPW)<br />
+
+                        Teamgenoten:<br />
+                        Els Peeters (MW)<br />
+                        Sofie Marynen (Arts)<br />
+
+                        Marijke Rooms (PMW)</td>
+                    <td>Zoersel</td>
+               </tr>
+
+                <tr>
+                    <td>Gesubsidieerde Vrije Gemengde Lagere School voor B.O. K.K.<br />
+                        Bethanïenlei 5<br />
+
+                        2960 St.-Job-in-'t Goor<br />
+
+                        Tel. 03 217 03 13<br />
+                        <a href="http://www.bulokk.be/" target="_blank">www.bulokk.be</a></td>
+
+                    <td>Contactpersoon:<br />
+                        Ellen Claessens (ppc)<br />
+
+                        Guy Van Deuren (coördinator)<br />
+                        Teamgenoten:<br />
+
+                        Ineke Verbruggen (mw)<br />
+                        Karen Van Doorslear (Arts)<br />
+
+                        Marijke Rooms (PMW)</td>
+
+                    <td>Zoersel</td>
+               </tr>
+                <tr>
+                    <td>Gesubsidieerde Vrije Kleuter en Lagere School voor B.O. St. Rafaël<br />
+
+                        Kerkelei 44<br />
+
+                        2960 St.-Job-in-'t Goor<br />
+
+                        Tel. 03 637 51 31<br />
+                        <a href="http://www.st-raf.be/" target="_blank">www.st-raf.be</a></td>
+                    <td>Contactpersoon:<br />
+                        Ellen Claessens(PPC)<br />
+
+                        Teamgenoten:<br />
+
+                        Marieke De Rijdt (MW)<br />
+                        Sofie Marynen (Arts)<br />
+                        Marieke De Rijdt (PMW)</td>
+                    <td>Zoersel</td>
+               </tr>
+
+                <tr>
+
+                    <td>BuSo Kristus Koning<br />
+                        Bethaniënlei 5<br />
+                        2960 St.-Job-in-'t Goor<br />
+                        Tel. 03 217 03 51<br />
+                        <a href="http://www.busokristuskoning.be/" target="_blank">www.busokristuskoning.be</a></td>
+
+                    <td>Contactpersoon:<br />
+
+                        Carine Vangeel (PPC)<br />
+                        Ellen Claessens (PPC)<br />
+                        Teamgenoten:<br />
+                        Ambra Bochi (MW)<br />
+                        Ingrid De Donder ()<br />
+
+                        Marijke Struyf (arts)</td>
+
+                    <td>Zoersel</td>
+               </tr>
+            </table>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <div id="voet">
+            <hr />
+            <p>U kunt een e-mailbericht met vragen of opmerkingen over deze website verzenden naar <a href="mailto:webmaster@clb-ami1.be">webmaster@clb-ami1.be</a></p>
+        </div>
+        </div>
+</body>
+</html>
+
+<body>

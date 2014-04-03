@@ -1,0 +1,96 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/clb.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript">
+ 
+$(document).ready(function(){  
+  
+    $("ul.subnav").parent().append("<span></span>"); //Only shows drop down trigger when js is enabled (Adds empty span tag after ul.subnav*)  
+  
+     $("ul.topnav li div").hover(function() { //When trigger is clicked...  
+  
+        //Following events are applied to the subnav itself (moving subnav up and down)  
+        $(this).parent().find("ul.subnav").slideDown('fast').show(); //Drop down the subnav on click  
+  
+        $(this).parent().hover(function() {  
+        }, function(){  
+            $(this).parent().find("ul.subnav").slideUp('fast'); //When the mouse hovers out of the subnav, move it back up  
+        });  
+  
+        //Following events are applied to the trigger (Hover events for the trigger)  
+        }).hover(function() {  
+            $(this).addClass("subhover"); //On hover over, add class "subhover"  
+        }, function(){  //On Hover Out  
+            $(this).removeClass("subhover"); //On hover out, remove class "subhover"  
+    });  
+  
+});  
+    </script>
+<title></title>
+</head>
+<body>
+        <div id="container">
+        <div id="boven">
+            <a href="index.html">
+            <img src="images/clblogo.gif" alt="CLB" align="left" height="100" width="200"/>
+            </a>
+            <h1>VCLB-1 Antwerpen Middengebied</h1>
+            <p><i>Vrij Centrum voor Leerlingenbegeleiding</i></p>
+        </div>
+        <div id="navigatie">
+<ul class="topnav">  
+    <li><a href="index.html">Home</a></li>  
+    <li> 
+   <div> 
+        <a href="werking.html">Werking</a>  
+        <ul class="subnav">  
+            <li><a href="kansen.html">Kansenbevordering</a></li>  
+            <li><a href="woord.html">CLB in woord en beeld</a></li>
+            <li><a href="links.html">Interessante links</a></li>  
+        </ul>  
+    </div>
+    </li>   
+    <li>
+    <div>
+     <a href="scholen/scholen.html">Scholen en teams</a>        
+        <ul class="subnav">  
+            <li><a href="scholen/scholen.html">Scholen</a></li>  
+            <li><a href="regionaal/scholen.html">Regionale scholen</a></li>
+            <li><a href="personeel/personeel.html">Personeel</a></li>  
+        </ul> 
+      </div>
+     </li>  
+    <li><a href="vacatures.html">Vacatures</a></li>  
+</ul>
+        </div>
+        <div id="inhoud">
+            <div class="kansen">
+                <h3>Kansenbevordering</h3>
+                <h4>Kansenbevordering in een CLB:</h4>
+<div>
+                <p>Het werk van een CLB richt zich op het bevorderen van het welbevinden van leerlingen doorheen hun schoolloopbaan. Het zich goed voelen heeft immers een positieve invloed op de ontwikkeling van zijn kennis en vaardigheden.<br />
+                Maar niet alle kinderen vertrekken met dezelfde kansen in het onderwijs. Er zijn leerlingen die door hun sociale achtergrond in hun ontwikkeling en in hun leerproces bedreigd worden.
+                Aangezien het onderwijs 'in principe' goed geplaatst is om de ontwikkelingskansen van deze leerlingen te vergroten, verdienen deze leerlingen onze extra aandacht.<br />
+                Met de werking Kansenbevordering willen we er enerzijds voor zorgen dat we als dienst zelf goed toegankelijk zijn voor leerlingen en hun ouders. 
+                We willen deskundig kunnen inspelen en omgaan met hun vragen en behoeften. En anderzijds willen we de school mee ondersteunen in een kansenbevorderend onderwijs. </p>
+</div><hr />
+               <h4>Gelijke Onderwijskansen (GOK)</h4>
+<div>
+                Via het GOK-decreet wil de Vlaamse overheid alle kinderen de beste kansen geven om te leren en zich te ontwikkelen. Scholen krijgen hiervoor extra middelen, ondersteuning en begeleiding.<br />
+                In de brochure <a href="http://www.ond.vlaanderen.be/gok/" target="_blank">'Gelijke onderwijskansen voor elk kind... scholen maken er werk van!'</a> Leest u in grote lijnen waarover dit decreet gaat.
+</div><hr />
+                <h4>Inschrijvingsrecht</h4>
+<div>
+                <a href="documents/inschrijvingsrecht.pdf" target="_blank">Klik hier voor meer informatie</a>
+</div>
+                </div>
+</div> </div>
+        <div id="voet">
+<hr />
+            <p>U kunt een e-mailbericht met vragen of opmerkingen over deze website verzenden naar <a href="mailto:webmaster@clb-ami1.be">webmaster@clb-ami1.be</a></p>
+        </div>
+       
+</div>
+</body>
+</html>

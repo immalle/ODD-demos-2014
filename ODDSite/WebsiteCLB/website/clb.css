@@ -1,0 +1,111 @@
+﻿body 
+{
+	font-family: "Verdana", Helvetica, Arial, sans-serif;
+}
+html 
+{
+}
+#boven img
+{
+    margin-left: auto;
+    margin-right: 50px;
+}
+p
+{
+    color: #336633;
+}
+#inhoud p
+{
+    font-size: 14px;
+}
+#boven
+{
+    color: #336699;
+    font-family: Comic Sans MS;
+}
+#inhoud 
+{
+    min-height: 500px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#voet
+{
+    font-size: 9px;
+    padding-top: 10px;
+}
+#wrapper
+{
+    width: 960px;
+    margin: 0 auto;
+}
+#navigation
+{
+    background-color: #99FF99;
+}
+
+#navigation ul
+{
+	overflow: hidden; /* Om floated li-elementen te containen */
+}
+
+#navigation ul li
+{
+	list-style-type: none;
+	float: left;
+}
+
+#navigation ul li a
+{
+	display: block;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: Black;
+}
+
+#navigation ul li a:hover,
+#navigation ul li a:focus
+{
+	background-color: #336699;
+    color: White;
+    text-decoration: none;
+}
+
+#navigation ul li a:active
+{
+	padding: 7px 10px 3px;
+    text-decoration: none;
+}
+div.domeinen > h3
+{
+    cursor: pointer;
+}
+h3
+{
+    color: #336699;
+}
+h4
+{
+    color: #669999;
+}
+ul
+{
+    color: #336633;
+    font-size: 14px;
+}
+#inhoud img
+{
+    max-width: 400px;
+}
+div.ligging > h3
+{
+    cursor: pointer;
+}
+td
+{
+    vertical-align: top;
+}
+div.personeel > h3
+{
+    cursor: pointer;
+}
