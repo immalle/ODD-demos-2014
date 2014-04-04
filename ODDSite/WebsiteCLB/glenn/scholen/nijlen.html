@@ -1,0 +1,165 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/clb.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('div.ligging> div').hide();
+            $('div.ligging> h3').click(function () {
+                $(this).next('div')
+                    .slideToggle('fast')
+                    .siblings('div:visible').slideUp('fast');
+    });  
+  
+});  
+$(document).ready(function(){  
+  
+    $("ul.subnav").parent().append("<span></span>"); //Only shows drop down trigger when js is enabled (Adds empty span tag after ul.subnav*)  
+  
+    $("ul.topnav li span").click(function() { //When trigger is clicked...  
+  
+        //Following events are applied to the subnav itself (moving subnav up and down)  
+        $(this).parent().find("ul.subnav").slideDown('fast').show(); //Drop down the subnav on click  
+  
+        $(this).parent().hover(function() {  
+        }, function(){  
+            $(this).parent().find("ul.subnav").slideUp('slow'); //When the mouse hovers out of the subnav, move it back up  
+        });  
+  
+        //Following events are applied to the trigger (Hover events for the trigger)  
+        }).hover(function() {  
+            $(this).addClass("subhover"); //On hover over, add class "subhover"  
+        }, function(){  //On Hover Out  
+            $(this).removeClass("subhover"); //On hover out, remove class "subhover"  
+    });  
+  
+});  
+    </script>
+<title></title>
+</head>
+<body>
+        <div id="container">
+        <div id="boven">
+
+            <a href="index.html">
+            <img src="../images/clblogo.gif" alt="CLB" align="left" height="100" width="200"/>
+            </a>
+            <h1>VCLB-1 Antwerpen Middengebied</h1>
+            <p><i>Vrij Centrum voor Leerlingenbegeleiding</i></p>
+        </div>
+        <div id="navigatie">
+
+<ul class="topnav">  
+    <li><a href="../index.html">Home</a></li>  
+    <li>  
+        <a href="../werking.html">Werking</a>  
+        <ul class="subnav">  
+            <li><a href="../kansen.html">Kansenbevordering</a></li>  
+            <li><a href="../woord.html">CLB in woord en beeld</a></li>
+
+            <li><a href="../links.html">Interessante links</a></li>  
+        </ul>  
+    </li>   
+    <li><a href="../scholen.html">Scholen en teams</a>        
+        <ul class="subnav">  
+            <li><a href="scholen.html">Scholen</a></li>  
+            <li><a href="../regionaal/scholen.html">Regionale scholen</a></li>
+
+            <li><a href="../personeel/personeel.html">Personeel</a></li>  
+        </ul> 
+     </li>  
+    <li><a href="../vacatures.html">Vacatures</a></li>  
+</ul>
+
+<ul class="schoolnav">  
+             <li><a href="brecht.html">Brecht</a></li>  
+            <li><a href="grobbendonk.html">Grobbendonk</a></li>
+            <li><a href="nijlen.html">Nijlen</a></li>
+
+            <li><a href="malle.html">Malle</a></li>
+            <li><a href="ranst.html">Ranst</a></li>
+            <li><a href="vorselaar.html">Vorselaar</a></li>
+            <li><a href="zandhoven.html">Zandhoven</a></li>
+            <li><a href="zoersel.html">Zoersel</a></li>  
+        </ul>  
+        </div>
+
+        <div id="inhoud">
+            <div class="ligging">
+                <h3>Nijlen</h3>
+                <div>
+<table border="1">
+
+            <tr>
+            <th>School</th>
+            <th>CLB-Team</th>
+            <th>Vestigingsplaats</th>
+            </tr>
+                           <tr>
+                    <td>Gesubsidieerde Vrije Basisschool<br />
+
+                        Nonnenstraat 21<br />
+                        2560 Nijlen<br />
+                        Tel. 03 481 97 43<br />
+                        <a href="http://www.basisschool-calasanz.be/">www.basischool-calasanz.be</a></td>
+
+                    <td>Contactpersoon:<br />
+                        Carmen Vanhooren (PPC)<br />
+
+                        Teamgenoten:<br />
+                        Ruth Lenaerts (MW)<br />
+                        Caroline Vanlimbergen (Arts)<br />
+                        Régine Slabbaert (PMW)</td>
+
+                    <td>Vorselaar</td>
+               </tr>
+
+               <tr>
+                    <td>Gesubsidieerde Vrije Basisschool<br />
+                        Zandlaan 46<br />
+                        2560 Nijlen<br />
+                        Tel. 03 481 87 67<br />
+
+                        <a href="http://www.zandlopernijlen.be/">www.zandlopernijlen.be</a></td>
+
+                    <td>Contactpersoon:<br />
+                        Kristin Merckx (PPW)<br />
+                        Teamgenoten:<br />
+                        Ine Broeckx (MW)<br />
+                        Caroline Vanlimbergen (Arts)<br />
+
+                        Marijke Van Herck (PMW)</td>
+                    <td>Vorselaar</td>
+               </tr>
+               <tr>
+                    <td>Sint-Calasanz Instituut<br />
+                        Nonnenstraat 21<br />
+                        2560 Nijlen<br />
+
+                        Tel. 03 481 82 45<br />
+                        <a href="http://www.calasanz.be/">www.calasanz.be</a></td>
+                    <td>Contactpersoon:<br />
+                        Carmen Vanhooren (PPC)<br />
+                        Teamgenoten:<br />
+                        Ruth Lenaerts (MW)<br />
+
+                        Caroline Vanlimbergen (Arts)<br />
+                        Kirsten Vranckx (PMW)</td>
+                    <td>Vorselaar</td>
+               </tr>
+            </table>
+            </div>
+        </div>
+
+        </div>
+ </div>
+        <div id="voet">
+            <hr />
+            <p>U kunt een e-mailbericht met vragen of opmerkingen over deze website verzenden naar webmaster@clb-ami1.be</p>
+        </div>
+
+       
+</body>
+</html>
+<body>
+

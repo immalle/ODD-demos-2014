@@ -1,0 +1,234 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/clb.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('div.ligging> div').hide();
+            $('div.ligging> h3').click(function () {
+                $(this).next('div')
+                    .slideToggle('fast')
+                    .siblings('div:visible').slideUp('fast');
+    });  
+  
+});  
+$(document).ready(function(){  
+  
+    $("ul.subnav").parent().append("<span></span>"); //Only shows drop down trigger when js is enabled (Adds empty span tag after ul.subnav*)  
+  
+    $("ul.topnav li div").hover(function() { //When trigger is clicked...  
+  
+        //Following events are applied to the subnav itself (moving subnav up and down)  
+        $(this).parent().find("ul.subnav").slideDown('fast').show(); //Drop down the subnav on click  
+  
+        $(this).parent().hover(function() {  
+        }, function(){  
+            $(this).parent().find("ul.subnav").slideUp('fast'); //When the mouse hovers out of the subnav, move it back up  
+        });  
+  
+        //Following events are applied to the trigger (Hover events for the trigger)  
+        }).hover(function() {  
+            $(this).addClass("subhover"); //On hover over, add class "subhover"  
+        }, function(){  //On Hover Out  
+            $(this).removeClass("subhover"); //On hover out, remove class "subhover"  
+    });  
+  
+});  
+    </script>
+<title></title>
+</head>
+<body>
+        <div id="container">
+        <div id="boven">
+            <a href="../index.html">
+            <img src="../images/clblogo.gif" alt="CLB" align="left" height="100" width="200"/>
+            </a>
+            <h1>VCLB-1 Antwerpen Middengebied</h1>
+            <p><i>Vrij Centrum voor Leerlingenbegeleiding</i></p>
+        </div>
+        <div id="navigatie">
+<ul class="topnav">  
+    <li><a href="../index.html">Home</a></li>  
+    <li>
+    <div>  
+        <a href="../werking.html">Werking</a>  
+        <ul class="subnav">  
+            <li><a href="../kansen.html">Kansenbevordering</a></li>  
+            <li><a href="../woord.html">CLB in woord en beeld</a></li>
+            <li><a href="../links.html">Interessante links</a></li>  
+        </ul>
+    </div>  
+    </li>   
+    <li>
+     <div>
+     <a href="../scholen/scholen.html">Scholen en teams</a>        
+        <ul class="subnav">  
+            <li><a href="scholen.html">Scholen</a></li>  
+            <li><a href="../regionaal/scholen.html">Regionale scholen</a></li>
+            <li><a href="../personeel/personeel.html">Personeel</a></li>  
+        </ul>
+     </div> 
+     </li>  
+    <li><a href="../vacatures.html">Vacatures</a></li>  
+</ul>
+        </div>
+        <div id="inhoud">
+            <div class="ligging">
+                <h3>Directie</h3>
+                <div>
+                <table>
+                    <tr>
+                       <td><p><a href="mailto:directie@clb-ami1.be">Peter De Hond</a></p></td>
+                    </tr>
+                </table>
+                </div>
+                <hr />
+                <h3>Vestigingscoördinaten</h3>
+                <div>
+                <table>
+                    <tr>
+                        <td><p>Vorselaar</p><a href="mailto:directie@clb-ami1.be">Peter De Hond</p></td>
+                         </tr>
+                       <tr>
+                        <td><p>Zoersel</p><a href="mailto:guy.vandeuren@clb-ami1.be">Guy Van Deuren</p></td>
+                    </tr>
+                </table>
+                </div>
+                <hr />
+                <h3>Administratieve medewerkers (MED)</h3>
+                <div>
+                <table>
+                    <tr>
+                        <td><p>Vorselaar</p><a href="mailto:chris.creemers@clb-ami1.be">Chris Creemers</a><br />
+                <a href="mailto:annemie.goormans@clb-ami1.be">Annemie Goormans</a></p></td>
+                    </tr>
+                    <tr>
+                        <td><p>Zoersel</p>
+                <p><a href="mailto:agnes.meeusen@clb-ami1.be">Agnes Meeusen</a><br />
+                <a href="mailto:yolanda.mertes@clb-ami1.be">Yolanda Mertes</a><br />
+                <a href="mailto:monique.vanlooveren@clb-ami1.be">Monique Van Looveren</a><br />
+                <a href="mailto:hilde.adriaensen@clb-ami1.be">Hilde Adriaensen</a></p></td>
+                         </tr>
+                </table>
+                </div>
+                <hr />
+
+                <h3>Artsen</h3>
+                <div>
+                <table>
+                    <tr>
+                        <td><p>Vorselaar</p><p><a href="mailto:caroline.vanlimbergen@clb-ami1.be">Caroline Vanlimbergen</a><br />
+                <a href="mailto:hilde.vervoort@clb-ami1.be">Hilde Vervoort</a></p>
+                    </tr>
+                    <tr>
+                        <td><p>Zoersel</p>
+                 <p><a href="mailto:sofie.marynen@clb-ami1.be">Sofie Marynen</a><br />
+                <a href="mailto:karen.vandoorslaer@clb-ami1.be">Karen Van Doorslaer</a><br />
+                <a href="mailto:marijke.struyf@clb-ami1.be">Marijke Struyf</a></p>
+                </div>
+                         </tr>
+                </table>
+                </div>
+                <hr />
+
+                <h3>Maatschappelijke werkers (MW)</h3>
+                <div>
+                <table>
+                    <tr>
+                        <td><p>Vorselaar</p>
+                <a href="mailto:stien.beirinckx@clb-ami1.be">Stien Beirinckx</a><br />
+                <a href="mailto:ine.broeckx@clb-ami1.be">Ine Broeckx</a><br />
+                <a href="mailto:ruth.lenaerts@clb-ami1.be">Ruth Lenaerts</a></p>
+                    </tr>
+                    <tr>
+                        <td><p>Zoersel</p>
+                 <p><a href="mailto:sofie.marynen@clb-ami1.be">Sofie Marynen</a><br />
+                <a href="mailto:karen.vandoorslaer@clb-ami1.be">Karen Van Doorslaer</a><br />
+                <a href="mailto:marijke.struyf@clb-ami1.be">Marijke Struyf</a></p>
+                </div>
+                         </tr>
+                </table>
+                </div>
+                <hr />
+
+                 <h3>Paramedisch werkers (PMW)</h3>
+                <div>
+                <table>
+                    <tr>
+                        <td><p>Vorselaar</p>
+                <p><a href="mailto:kirsten.vranckx@clb-ami1.be">Kirsten Vranckx</a><br />
+                <a href="mailto:kristine.desloovere@clb-ami1.be">Kristine Desloovere</a><br />
+                <a href="mailto:regine.slabbaert@clb-ami1.be">Regine Slabbaert</a><br />
+                <a href="mailto:marijke.vanherck@clb-ami1.be">Marijke Van Herck</a></p>
+                    </tr>
+                    <tr>
+                        <td><p>Zoersel</p>
+                <p><a href="mailto:marieke.derijdt@clb-ami1.be">Marieke De Rijdt</a><br />
+                <a href="mailto:marijke.rooms@clb-ami1.be">Marijke Rooms</a><br />
+                <a href="mailto:ingrid.dedonder@clb-ami1.be">Ingrid De Donder</a><br />
+                <a href="mailto:sofie.claes@clb-ami1.be">Sofie Claes</a><br />
+                <a href="mailto:marijke.vanherck@clb-ami1.be">Marijke Van Herck</a><br />
+                <a href="mailto:ines.ferny@clb-ami1.be">Ines Ferny</a></p>
+                </div>
+                         </tr>
+                </table>
+                </div>
+                <hr />
+
+                <h3>Psycho-pedagogische consulenten (PPC)</h3>
+                <div>
+                <table>
+                    <tr>
+                        <td><p>Vorselaar</p>
+                <p><a href="mailto:guido.cox@clb-ami1.be">Guido Coxw</a><br />
+                <a href="mailto:hilde.vanneste@clb-ami1.be">Hilde Vanneste</a><br />
+                <a href="mailto:carmen.vanhooren@clb-ami1.be">Carmen Vanhooren</a><br />
+                <a href="mailto:liesbeth.geuens@clb-ami1.be">Liesbeth Geuens</a></p>
+                    </tr>
+                    <tr>
+                        <td><p>Zoersel</p>
+                <p><a href="mailto:christel.jeurissen@clb-ami1.be">Christel Jeurissen</a><br />
+                <a href="mailto:marleen.vanelsacker@clb-ami1.be">Marleen Van Elsacker</a><br />
+                <a href="mailto:carine.vangeel@clb-ami1.be">Carine Vangeel</a><br />
+                <a href="mailto:liestbet.peeters@clb-ami1.be">Liesbet Peeters</a><br />
+                <a href="mailto:sofie.vandoninck@clb-ami1.be">Sofie van Doninck</a><br />
+                <a href="mailto:bie.vermeiren@clb-ami1.be">Bie Vermeiren</a><br />
+
+                <a href="mailto:lies.mertens@clb-ami1.be">Lies Mertens</a><br />
+                <a href="mailto:ellen.claesens@clb-ami1.be">Ellen Claesens</a><br />
+                <a href="mailto:tin.schrauwen@clb-ami1.be">Tin Schrauwen</a><br />
+                </div>
+                         </tr>
+                </table>
+                </div>
+                <hr />
+
+                 <h3>Psycho-pedagogische werkers (PPW)</h3>
+                <div>
+                <table>
+                    <tr>
+                        <td><p>Vorselaar</p>
+                <p><a href="mailto:kristin.merckx@clb-ami1.be">Kristin Merckx</a><br />
+                <a href="mailto:kathy.baert@clb-ami1.be">Kathy Baert</a></p>
+                    </tr>
+                    <tr>
+                        <td><p>Zoersel</p>
+                <p><a href="mailto:guy.vandeuren@clb-ami1.be">Guy Van Deuren</a><br />
+                <a href="mailto:silke.vandercruyssen@clb-ami1.be">Silke Van Der Cruyssen</a><br />
+                <a href="mailto:inge.levens@clb-ami1.be">Inge Levens</a></p>
+                </div>
+                         </tr>
+                </table>
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="voet">
+            <hr />
+            <p>U kunt een e-mailbericht met vragen of opmerkingen over deze website verzenden naar <a href="mailto:webmaster@clb-ami1.be">webmaster@clb-ami1.be</a></p>
+        </div>
+        </div>
+</body>
+</html>
+<body>

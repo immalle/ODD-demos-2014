@@ -1,0 +1,91 @@
+<html>
+<head>
+    <link href="css/clb.css" rel="stylesheet" type="text/css"  />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript">
+$(document).ready(function(){  
+  
+    $("ul.subnav").parent().append("<span></span>"); //Only shows drop down trigger when js is enabled (Adds empty span tag after ul.subnav*)  
+  
+   $("ul.topnav li div").hover(function() { //When trigger is clicked...  
+  
+        //Following events are applied to the subnav itself (moving subnav up and down)  
+        $(this).parent().find("ul.subnav").slideDown('fast').show(); //Drop down the subnav on click  
+  
+        $(this).parent().hover(function() {  
+        }, function(){  
+            $(this).parent().find("ul.subnav").slideUp('fast'); //When the mouse hovers out of the subnav, move it back up  
+        });  
+  
+        //Following events are applied to the trigger (Hover events for the trigger)  
+        }).hover(function() {  
+            $(this).addClass("subhover"); //On hover over, add class "subhover"  
+        }, function(){  //On Hover Out  
+            $(this).removeClass("subhover"); //On hover out, remove class "subhover"  
+    });  
+  
+});  
+    </script>
+<title></title>
+</head>
+<body>
+        <div id="container">
+        <div id="boven">
+            <a href="index.html">
+            <img src="images/clblogo.gif" alt="CLB" align="left" height="100" width="200"/>
+            </a>
+            <h1>VCLB-1 Antwerpen Middengebied</h1>
+            <p><i>Vrij Centrum voor Leerlingenbegeleiding</i></p>
+        </div>
+        <div id="navigatie">
+<ul class="topnav">  
+    <li><a href="index.html">Home</a></li>  
+    <li>
+     <div>  
+        <a href="werking.html">Werking</a>  
+        <ul class="subnav">  
+            <li><a href="kansen.html">Kansenbevordering</a></li>  
+            <li><a href="woord.html">CLB in woord en beeld</a></li>
+            <li><a href="links.html">Interessante links</a></li>  
+        </ul>
+    </div>  
+    </li>   
+    <li>
+      <div>
+     <a href="scholen/scholen.html">Scholen en teams</a>        
+        <ul class="subnav">  
+            <li><a href="scholen/scholen.html">Scholen</a></li>  
+            <li><a href="regionaal/scholen.html">Regionale scholen</a></li>
+            <li><a href="personeel/personeel.html">Personeel</a></li>  
+        </ul>
+      </div> 
+     </li>  
+    <li><a href="vacatures.html">Vacatures</a></li>  
+</ul>
+        </div>
+        <div id="inhoud">
+            <div class="werking">
+                </br></br></br><h3>Wat doen wij</h3>
+                <h4>De leerling centraal</h4>
+                <p>Het Vrij CLB 1 – Antwerpen Middengebied werkt aan het welbevinden van de leerlingen op <a href="domeinen/domeinen.html">4 domeinen</a>.
+                <br />Hierbij gaan we uit van de <b>vragen</b> van de leerlingen, ouders en scholen.</p>
+                <p>De <b>CLB-contactpersoon</b> is het aanspreekpunt voor onze cliënten.<br />
+                Deze zal uw vraag goed beluisteren en indien nodig bespreken met het <b>CLB-team</b> (arts, maatschappelijk werker, sociaal verpleegkundige,  psycholoog, pedagoog).</p>
+                <p>Onze medewerkers zoeken met u mee naar antwoorden en oplossingen.<br /> 
+                De dienstverlening is <b>adviserend, gratis en discreet</b> (beroepsgeheim) en gebeurt - indien gewenst - in nauwe samenwerking met de school.</p>
+                <p>Soms blijkt meer gespecialiseerd, intensiever onderzoek en/ of begeleiding aangewezen.<br />
+                Het CLB begeleidt u dan bij een 'doorverwijzing'.</p>
+                <p>Wie hierover meer wil lezen, kan dit in het <a href="documents/missionstatement.pdf" target="_blank">mission statement</a> van de centra, het 
+                <a href="http://www.ond.vlaanderen.be/edulex/database/document/document.asp?docid=12274" target="_blank">CLB-decreet</a> van de Vlaamse regering en in de <a href="documents/deontologischecode.pdf">deontologische code</a>.</p>
+     </div>
+     </div>
+</div>
+        <div id="voet">
+        <hr />
+            <p>U kunt een e-mailbericht met vragen of opmerkingen over deze website verzenden naar <a href="mailto:webmaster@clb-ami1.be">webmaster@clb-ami1.be</a></p>
+        </div>
+        
+
+</body>
+</html>
+<body>

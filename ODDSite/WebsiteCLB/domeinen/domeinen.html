@@ -1,0 +1,149 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/clb.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('div.ligging> div').hide();
+            $('div.ligging> h3').click(function () {
+                $(this).next('div')
+                    .slideToggle('fast')
+                    .siblings('div:visible').slideUp('fast');
+    });  
+  
+});  
+$(document).ready(function(){  
+  
+    $("ul.subnav").parent().append("<span></span>"); //Only shows drop down trigger when js is enabled (Adds empty span tag after ul.subnav*)  
+  
+    $("ul.topnav li div").hover(function() { //When trigger is clicked...  
+  
+        //Following events are applied to the subnav itself (moving subnav up and down)  
+        $(this).parent().find("ul.subnav").slideDown('fast').show(); //Drop down the subnav on click  
+  
+        $(this).parent().hover(function() {  
+        }, function(){  
+            $(this).parent().find("ul.subnav").slideUp('fast'); //When the mouse hovers out of the subnav, move it back up  
+        });  
+  
+        //Following events are applied to the trigger (Hover events for the trigger)  
+        }).hover(function() {  
+            $(this).addClass("subhover"); //On hover over, add class "subhover"  
+        }, function(){  //On Hover Out  
+            $(this).removeClass("subhover"); //On hover out, remove class "subhover"  
+    });  
+  
+});  
+    </script>
+<title></title>
+</head>
+<body>
+        <div id="container">
+        <div id="boven">
+
+            <a href="../index.html">
+            <img src="../images/clblogo.gif" alt="CLB" align="left" height="100" width="200"/>
+            </a>
+            <h1>VCLB-1 Antwerpen Middengebied</h1>
+            <p><i>Vrij Centrum voor Leerlingenbegeleiding</i></p>
+        </div>
+        <div id="navigatie">
+<ul class="topnav">  
+    <li><a href="../index.html">Home</a></li>  
+    <li> 
+<div> 
+        <a href="../werking.html">Werking</a>  
+        <ul class="subnav">  
+            <li><a href="../kansen.html">Kansenbevordering</a></li>  
+            <li><a href="../woord.html">CLB in woord en beeld</a></li>
+            <li><a href="../links.html">Interessante links</a></li>  
+        </ul>  
+</div>
+    </li>   
+    <li><div><a href="../scholen/scholen.html">Scholen en teams</a>        
+        <ul class="subnav">  
+            <li><a href="../scholen/scholen.html">Scholen</a></li>  
+            <li><a href="../regionaal/scholen.html">Regionale scholen</a></li>
+            <li><a href="../personeel/personeel.html">Personeel</a></li>  
+        </ul>
+</div> 
+     </li>  
+    <li><a href="../vacatures.html">Vacatures</a></li>  
+
+</ul>
+        </div>
+        <div id="inhoud">
+            <div class="ligging">
+                <h3>Preventieve gezondheidszorg</h3>
+                <div>
+                <table>
+                    <tr>
+                       <td><h4>Het domein '<b>Preventieve Gezondheidszorg</b>' houdt in:</h4>
+                <h4>1. Medische onderzoeken :</h4>
+                <p>De artsen en paramedisch werkers (verpleegkunden) voeren bij de leerlingen van 'hun' scholen <b>gratis</b> een aantal <b>medische onderzoeken</b> uit, de zogenaamde 'consulten'.<br />
+
+                Er bestaan <a href="http://www.ond.vlaanderen.be/clb/CLB-medewerker/Medische_consulten.htm" target="_blank">drie soorten consulten</a></p>
+                <p>De ouders worden van het resultaat op de hoogte gebracht.<br />
+                via een '<b>verwijsbrief</b>' worden de kinderen soms doorverwezen voor verder onderzoek of behandeling. Het is belangrijk dat ouders gevolg geven aan deze doorverwijzing en het reultaat aan de CLB-arts terugbezorgen.</p>
+                <h4><a href="http://www.ond.vlaanderen.be/clb/CLB-medewerker/Vaccinatiecampagne.htm" target="_blank">2. Opvolgen en aanbieden van vaccinaties</a></h4>
+                <h4><a href="http://www.ond.vlaanderen.be/clb/CLB-medewerker/Profylaxe.htm" target="_blank">3. Toezicht op besmettelijke ziekten</a></h4>
+
+                <h4>4. Gezondheidsvoorlichting en -opvoeding :</h4>
+                <p>Promoten van gezonde eet- en leefgewoonten. Dit kan op verschillende manieren :<br />
+                tijdens een individueel gesprek, klassikale vorming, ondersteuning van preventieve activiteiten op school of via campagnes georganiseerd door het <a href="http://www.ond.vlaanderen.be/clb/CLB-medewerker/LOGO.htm" target="_blank">LOGO</a>.</p>
+                <h4>5. Kijk mee achter de schermen met Klasse :</h4>
+                <p>De camera van TV.Klasse liep een dagje mee met schoolarts Liesbeth. <a href="http://www.klasse.be/leraren/TV.Klasse.php?id=11011" target="_blank">Bekijk het filmpje.</a> (Bron: TV.Klasse)<br />
+
+                Ook Maks!TV ging op bezoek bij schoolarts Monique. <a href="http://www.maks.be/video/help-ik-moet-op-medisch-onderzoek/" target="_blank">Bekijk het filmpje.</a> (Bron: Maks!TV)</p></td>
+
+                    </tr>
+                </table>
+                </div>
+                <hr />
+                <h3>Leren en studeren</h3>
+                <div>
+                <table>
+                    <tr>
+                        <td><p>Als het leren niet wil vlotten en meer hulp nodig is...</p>
+                <p>Gesprekken, onderzoek en begeleiding bij leerproblemen en studiemogelijkheden</p>
+                <p>Leerstoornissen, faalangst, studiemotivatie...</p></td>
+                    </tr>
+                </table>
+                </div>
+                <hr />
+                <h3>Onderwijsloopbaan</h3>
+                <div>
+                <table>
+                    <tr>
+                    <td><p>Bij keuzemoeilijkheden gaan we samen met jou op weg zodat je zelf je toekomst kan leren plannen.</p>
+                <p>Je kan bij ons ook terecht voor informatie over opleidingen, onderwijswetgeving, ...</p></td>
+                    </tr>
+                </table>
+                    </tr>
+                 </div>
+                <hr />
+                 <h3>Psychisch en sociaal functioneren</h3>
+                <div>
+                <table>
+                        <td><p>Het CLB is een <b>veilige plek</b> waar je in vertrouwen terecht kan met je vragen en problemen.</p>
+                <p>Als je je niet goed voelt in je vel...<br />
+                Wanneer het niet vlot met leeftijdsgenoten of thuis...<br />
+                dan staat onze deur altijd voor je open.</p>
+                <p>Ook ouders kunnen bij ons terecht met hun vragen rond gedrag, opvoeding, relaties, ...</p></td>
+                </table>
+                </div>
+                <hr />
+                 </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <div id="voet">
+            <hr />
+            <p>U kunt een e-mailbericht met vragen of opmerkingen over deze website verzenden naar <a href="mailto:webmaster@clb-ami1.be">webmaster@clb-ami1.be</a></p>
+        </div>
+        </div>
+</body>
+</html>
+<body>

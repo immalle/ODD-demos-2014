@@ -1,0 +1,235 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/clb.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('div.scholen> div').hide();
+            $('div.scholen> h3').click(function () {
+                $(this).next('div')
+                    .slideToggle('fast')
+                    .siblings('div:visible').slideUp('fast');
+    });  
+  
+});  
+$(document).ready(function(){  
+  
+    $("ul.subnav").parent().append("<span></span>"); //Only shows drop down trigger when js is enabled (Adds empty span tag after ul.subnav*)  
+  
+    $("ul.topnav li div").hover(function() { //When trigger is clicked...  
+  
+        //Following events are applied to the subnav itself (moving subnav up and down)  
+        $(this).parent().find("ul.subnav").slideDown('fast').show(); //Drop down the subnav on click  
+  
+        $(this).parent().hover(function() {  
+        }, function(){  
+            $(this).parent().find("ul.subnav").slideUp('fast'); //When the mouse hovers out of the subnav, move it back up  
+        });  
+  
+        //Following events are applied to the trigger (Hover events for the trigger)  
+        }).hover(function() {  
+            $(this).addClass("subhover"); //On hover over, add class "subhover"  
+        }, function(){  //On Hover Out  
+            $(this).removeClass("subhover"); //On hover out, remove class "subhover"  
+    });  
+  
+});  
+    </script>
+<title></title>
+</head>
+<body>
+        <div id="container">
+        <div id="boven">
+
+            <a href="../index.html">
+            <img src="../images/clblogo.gif" alt="CLB" align="left" height="100" width="200"/>
+            </a>
+            <h1>VCLB-1 Antwerpen Middengebied</h1>
+            <p><i>Vrij Centrum voor Leerlingenbegeleiding</i></p>
+        </div>
+        <div id="navigatie">
+
+<ul class="topnav">  
+    <li><a href="../index.html">Home</a></li>  
+    <li>
+    <div>  
+        <a href="../werking.html">Werking</a>  
+        <ul class="subnav">  
+            <li><a href="../kansen.html">Kansenbevordering</a></li>  
+            <li><a href="../woord.html">CLB in woord en beeld</a></li>
+            <li><a href="../links.html">Interessante links</a></li>  
+        </ul>
+     </div>  
+    </li>   
+    <li>
+     <div>
+     <a href="scholen.html">Scholen en teams</a>        
+        <ul class="subnav">  
+            <li><a href="scholen.html">Scholen</a></li>  
+            <li><a href="../regionaal/scholen.html">Regionale scholen</a></li>
+
+            <li><a href="../personeel/personeel.html">Personeel</a></li>  
+        </ul>
+      </div> 
+     </li>  
+    <li><a href="../vacatures.html">Vacatures</a></li>  
+</ul>
+
+<ul class="schoolnav">  
+            <li><a href="brecht.html">Brecht</a></li>  
+            <li><a href="grobbendonk.html">Grobbendonk</a></li>
+            <li><a href="lille.html">Lille</a></li>
+            <li><a href="malle.html">Malle</a></li>
+            <li><a href="nijlen.html">Nijlen</a></li>
+            <li><a href="ranst.html">Ranst</a></li>
+            <li><a href="vorselaar.html">Vorselaar</a></li>
+            <li><a href="zandhoven.html">Zandhoven</a></li>
+            <li><a href="zoersel.html">Zoersel</a></li>  
+        </ul>  
+        </div>
+
+        <div id="inhoud">
+            <div class="scholen">
+                <h3>Zoersel</h3>
+                <div>
+                <table border="1">
+            <tr>
+            <th>School</th>
+            <th>CLB-Team</th>
+            <th>Vestigingsplaats</th>
+            </tr>
+                           <tr>
+                    <td>Gesubsidieerde Vrije Basisschool<br />
+
+                        (St. Elisabeth)<br />
+                        Zandstraat 39<br />
+                        2980 Zoersel<br />
+                        Tel. 03 312 35 10<br />
+
+                        <a href="http://www.elisazoe.be/">www.elisazoe.be</a></td>
+                    <td>Contactpersoon:<br />
+
+                        Kathy Baert (PPW)<br />
+                        Teamgenoten:<br />
+                        Ruth Lenaerts (MW)<br />
+                        Caroline Vanlimbergen (Arts)<br />
+
+                        Régine Slabbaert (PMW)</td>
+                    <td>Vorselaar</td>
+
+               </tr>
+               <tr>
+                    <td>Gesubsidieerde Gemeentelijke<br />
+                        Basisschool (De Kiekeboes)<br />
+                        Kerkstraat 7<br />
+
+                        2980Zoersel<br />
+
+                        Tel. 03 312 22 42<br />
+                        <a href="http://users.telenet.be/gsa/">http://users.telenet.be/gsa/</a></td>
+                    <td>Contactpersoon:<br />
+                        Christel Jeurissen (PPC)<br />
+                        Teamgenoten:<br />
+
+                        Els Peeters (mw)<br />
+
+                        Marijke Struyf (Arts)<br />
+                        Marijke Vanherck (PMW)</td>
+                    <td>Zoersel</td>
+               </tr>
+            </table>            
+                </div>
+                <hr />
+                <h3>Sint-Antonius</h3>
+                <div>
+                <table border="1">
+
+            <tr>
+            <th>School</th>
+            <th>CLB-Team</th>
+            <th>Vestigingsplaats</th>
+            </tr>
+                           <tr>
+                    <td>Gesubsidieerde Vrije Basisschool<br />
+
+                        (Antoniusschool)<br />
+                        Handelslei 72<br />
+                        2980 St. Antonius<br />
+                        Tel. 03 383 30 37<br />
+
+                        <a href="http://www.antoniusschool.be//">www.antoniusschool.be</a></td>
+                    <td>Contactpersoon:<br />
+
+                        Christel Jeurissen (PPC)<br />
+                        Teamgenoten:<br />
+                        Els Verbreuken (mw)<br />
+                        Marijke Struyf (Arts)<br />
+
+                        Marijke Vanherck (pmw)</td>
+                    <td>Zoersel</td>
+
+               </tr>
+                <tr>
+                    <td>Gesubsidieerde Gemeentelijke <br />
+                        Basisschool (Beuk & Noot)<br />
+
+                        (St. Antonius)<br />
+                        Ter Beuken 1<br />
+
+                        2980 St. Antonius<br />
+                        Tel. 03 383 13 59<br />
+                        <a href="http://users.telenet.be/gsa/">http://users.telenet.be/gsa/</a></td>
+                    <td>Contactpersoon:<br />
+
+                        Liesbet Peeters (PPC)<br />
+                        Teamgenoten:<br />
+
+                        Els Van Goubergen (mw)<br />
+                        Marijke Struyf (arts)<br />
+                        Marijke Vanherck (pmw)</td>
+                    <td>Zoersel</td>
+               </tr>
+            </table>            
+                </div>
+                <hr />
+                <h3>Halle</h3>
+                <div>
+                <table border="1">
+            <tr>
+            <th>School</th>
+            <th>CLB-Team</th>
+            <th>Vestigingsplaats</th>
+            </tr>
+
+                           <tr>
+                    <td>Gesubsidieerde Gemeentelijke <br />
+                        Basisschool (Pierenbos)<br />
+                        Halle-Velden 2<br />
+                        2980 Halle<br />
+                        Tel. 03 383 47 17<br />
+
+                        <a href="http://users.telenet.be/gsa/">http://users.telenet.be/gsa/</a></td>
+                    <td>Contactpersoon:<br />
+                        Christel Jeurissen (PPC)<br />
+                        Teamgenoten:<br />
+                        Els Verbreuken (mw)<br />
+                        Marijke Struyf (Arts)<br />
+
+                        Marijke Vanherck (PMW)</td>
+                    <td>Zoersel</td>
+               </tr>
+            </table>
+
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <div id="voet">
+            <hr />
+            <p>U kunt een e-mailbericht met vragen of opmerkingen over deze website verzenden naar <a href="mailto:webmaster@clb-ami1.be">webmaster@clb-ami1.be</a></p>
+        </div>
+        </div>
+</body>
+</html>
+<body>

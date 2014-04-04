@@ -3,4 +3,11 @@ I want to be the very best.
 hallo
 Git pushing.
 Xentr says hi
+<<<<<<< HEAD
 Ik wacht nog op de 2 nieuwe mappen met de 2 ODD projecten! :)
+SourceTree push :p
+=======
+Ik wacht nog op de 2 nieuwe mappen met de 2 ODD projecten! :D
+carried away by a moonlightshadow
+YEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH
+>>>>>>> 9d2e7377e2cf1b3a37f4608a858228d4fdeda5d9

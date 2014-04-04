@@ -1,0 +1,133 @@
+body
+{
+background: #CCCC33;
+color: #000000;
+font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size: 0.8em;
+max-width: 90%;
+margin: 0 auto;
+margin-bottom: 13px;
+border-top: solid 15px #FF3300;
+border-bottom: solid 5px #FF3300;
+}
+
+a
+{
+text-decoration: none;
+color:rgb(162,192,15);
+transition:all .25s ease;
+}
+
+a:hover
+{
+opacity:0.8;
+}
+
+
+header
+{
+padding: 5px;
+background: #ffffff;
+}
+
+header img.bottom
+{
+vertical-align:baseline;
+}
+
+header .right
+{
+text-align:right;
+vertical-align:bottom;
+width:100%;
+}
+
+hr
+{
+  border: 0;
+  background-color: rgb(162,192,15);
+  width: 99%;
+  height: 2px;
+}
+
+nav
+{
+max-width:100%;
+position:relative;
+}
+
+nav ul
+{
+text-align: center;
+}
+
+nav ul li
+{
+display:inline-block;
+font-weight:bold;
+margin: 10px;
+}
+
+nav ul li a
+{
+padding:3px 6px 3px 10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav ul li a:link, nav ul li a:visited
+{
+background:#cccccc;
+border-bottom:solid 1px #E0C1E0;
+color:#000;
+font-weight:bold;
+}
+
+nav ul li a:hover, nav ul li a:active, nav ul li a:focus
+{
+background:#cccccc !important;
+color:#FF3300 !important;
+font-weight:bold;
+}
+
+#container
+{
+padding: 10px;
+width: auto;
+background: #ffffff;
+}
+
+#container  h3
+{
+color:rgb(162,192,15);
+}
+
+.boxcontent
+{
+height:auto;
+padding: 10px;
+position:relative;
+}
+
+.boxcontent table.center
+{
+margin-left:auto; 
+margin-right:auto;
+}
+
+.boxcontent table td
+{
+width: 400px;
+}
+
+.boxcontent p
+{
+padding-left: 30px;
+}
+
+#sidebar{
+	width:4%;
+	position:fixed;
+	top:150px;
+	left:25px;
+	}
