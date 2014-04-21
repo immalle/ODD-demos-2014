@@ -22,14 +22,14 @@ namespace JetFighter2D {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resource7 {
+    internal class Resource13 {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resource7() {
+        internal Resource13() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace JetFighter2D {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("JetFighter2D.Resource7", typeof(Resource7).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("JetFighter2D.Resource13", typeof(Resource13).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,9 +63,9 @@ namespace JetFighter2D {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap missileFixedHitbox {
+        internal static System.Drawing.Bitmap Sky2 {
             get {
-                object obj = ResourceManager.GetObject("missileFixedHitbox", resourceCulture);
+                object obj = ResourceManager.GetObject("Sky2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

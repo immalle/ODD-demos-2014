@@ -1,4 +1,4 @@
-﻿namespace GameMethods
+﻿namespace JetFighter2D
 {
     partial class Form1
     {
@@ -34,10 +34,6 @@
             this.startButton = new System.Windows.Forms.Button();
             this.scoreButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.timer4 = new System.Windows.Forms.Timer(this.components);
-            this.timer5 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.startPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +46,7 @@
             // 
             this.startPictureBox.BackColor = System.Drawing.SystemColors.Control;
             this.startPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.startPictureBox.Image = global::GameMethods.Resource1.Startscreen;
+            this.startPictureBox.Image = global::JetFighter2D.Resource1.Startscreen;
             this.startPictureBox.Location = new System.Drawing.Point(0, 0);
             this.startPictureBox.Name = "startPictureBox";
             this.startPictureBox.Size = new System.Drawing.Size(738, 344);
@@ -91,26 +87,6 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // timer2
-            // 
-            this.timer2.Interval = 4;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // timer3
-            // 
-            this.timer3.Interval = 4;
-            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
-            // 
-            // timer4
-            // 
-            this.timer4.Interval = 4;
-            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
-            // 
-            // timer5
-            // 
-            this.timer5.Interval = 4;
-            this.timer5.Tick += new System.EventHandler(this.timer5_Tick);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -137,10 +113,6 @@
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Button scoreButton;
         private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Timer timer3;
-        private System.Windows.Forms.Timer timer4;
-        private System.Windows.Forms.Timer timer5;
     }
 }
 

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GameMethods {
+namespace JetFighter2D {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace GameMethods {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GameMethods.Resource4", typeof(Resource4).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("JetFighter2D.Resource4", typeof(Resource4).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

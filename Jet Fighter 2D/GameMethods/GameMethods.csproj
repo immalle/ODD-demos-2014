@@ -7,7 +7,7 @@
     <ProjectGuid>{2AF4E975-B152-42C8-B79F-28364093C31C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GameMethods</RootNamespace>
+    <RootNamespace>JetFighter2D</RootNamespace>
     <AssemblyName>Jet Fighter 2D</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -50,6 +50,7 @@
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -94,6 +95,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource12.resx</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Resource13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource13.resx</DependentUpon>
     </Compile>
     <Compile Include="Resource2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -153,6 +159,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Resource1.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -173,6 +180,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource12.Designer.cs</LastGenOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource13.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource13.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resource2.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -279,6 +290,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sideMissile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sky2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
