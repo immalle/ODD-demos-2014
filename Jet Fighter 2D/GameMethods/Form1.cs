@@ -476,7 +476,7 @@ namespace JetFighter2D
         }
 
         //Click events
-        private void startButton_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             Cursor.Hide();
 
@@ -527,7 +527,7 @@ namespace JetFighter2D
             GV.cdTimer.Start();
         }
 
-        private void scoreButton_Click(object sender, EventArgs e)
+        private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             //new form with docked label
             Form scoreboard = new Form();
@@ -542,10 +542,16 @@ namespace JetFighter2D
             }
         }
 
-        private void exitButton_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        
+
+        
+
+        
 
     }
 

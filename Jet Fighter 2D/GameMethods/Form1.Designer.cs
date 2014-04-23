@@ -30,10 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.exitButton = new System.Windows.Forms.PictureBox();
+            this.scoreButton = new System.Windows.Forms.PictureBox();
+            this.startButton = new System.Windows.Forms.PictureBox();
             this.startPictureBox = new System.Windows.Forms.PictureBox();
-            this.startButton = new System.Windows.Forms.Button();
-            this.scoreButton = new System.Windows.Forms.Button();
-            this.exitButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.exitButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scoreButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.startButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.startPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,56 +45,58 @@
             this.timer1.Interval = 4;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // startPictureBox
+            // exitButton
             // 
-            this.startPictureBox.BackColor = System.Drawing.SystemColors.Control;
-            this.startPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.startPictureBox.Image = global::JetFighter2D.Resource1.Startscreen;
-            this.startPictureBox.Location = new System.Drawing.Point(0, 0);
-            this.startPictureBox.Name = "startPictureBox";
-            this.startPictureBox.Size = new System.Drawing.Size(738, 344);
-            this.startPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.startPictureBox.TabIndex = 1;
-            this.startPictureBox.TabStop = false;
+            this.exitButton.Image = global::JetFighter2D.Properties.Resources.quitbuttonbutton;
+            this.exitButton.Location = new System.Drawing.Point(1337, 946);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(134, 66);
+            this.exitButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.exitButton.TabIndex = 7;
+            this.exitButton.TabStop = false;
+            this.exitButton.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // scoreButton
+            // 
+            this.scoreButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.scoreButton.Image = global::JetFighter2D.Properties.Resources.HighscoreButtonbutton2;
+            this.scoreButton.Location = new System.Drawing.Point(1200, 852);
+            this.scoreButton.Name = "scoreButton";
+            this.scoreButton.Size = new System.Drawing.Size(405, 66);
+            this.scoreButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.scoreButton.TabIndex = 6;
+            this.scoreButton.TabStop = false;
+            this.scoreButton.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // startButton
             // 
             this.startButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.startButton.Location = new System.Drawing.Point(13, 309);
+            this.startButton.Image = global::JetFighter2D.Resource1.playbuttonbutton;
+            this.startButton.Location = new System.Drawing.Point(141, 823);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(200, 23);
-            this.startButton.TabIndex = 2;
-            this.startButton.Text = "Play!";
-            this.startButton.UseVisualStyleBackColor = true;
-            this.startButton.Click += new System.EventHandler(this.startButton_Click);
+            this.startButton.Size = new System.Drawing.Size(370, 158);
+            this.startButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.startButton.TabIndex = 5;
+            this.startButton.TabStop = false;
+            this.startButton.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // scoreButton
+            // startPictureBox
             // 
-            this.scoreButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.scoreButton.Location = new System.Drawing.Point(269, 309);
-            this.scoreButton.Name = "scoreButton";
-            this.scoreButton.Size = new System.Drawing.Size(200, 23);
-            this.scoreButton.TabIndex = 3;
-            this.scoreButton.Text = "Scoreboard";
-            this.scoreButton.UseVisualStyleBackColor = true;
-            this.scoreButton.Click += new System.EventHandler(this.scoreButton_Click);
-            // 
-            // exitButton
-            // 
-            this.exitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.exitButton.Location = new System.Drawing.Point(526, 309);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(200, 23);
-            this.exitButton.TabIndex = 4;
-            this.exitButton.Text = "Quit";
-            this.exitButton.UseVisualStyleBackColor = true;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            this.startPictureBox.BackColor = System.Drawing.SystemColors.Control;
+            this.startPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.startPictureBox.Image = global::JetFighter2D.Resource1.StartscreenFiXed;
+            this.startPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.startPictureBox.Name = "startPictureBox";
+            this.startPictureBox.Size = new System.Drawing.Size(1680, 1050);
+            this.startPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.startPictureBox.TabIndex = 1;
+            this.startPictureBox.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(738, 344);
+            this.ClientSize = new System.Drawing.Size(1680, 1050);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.scoreButton);
             this.Controls.Add(this.startButton);
@@ -101,6 +106,9 @@
             this.Text = "Jet Fighter 2D";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.exitButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scoreButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.startButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.startPictureBox)).EndInit();
             this.ResumeLayout(false);
 
@@ -110,9 +118,9 @@
 
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox startPictureBox;
-        private System.Windows.Forms.Button startButton;
-        private System.Windows.Forms.Button scoreButton;
-        private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.PictureBox startButton;
+        private System.Windows.Forms.PictureBox scoreButton;
+        private System.Windows.Forms.PictureBox exitButton;
     }
 }
 

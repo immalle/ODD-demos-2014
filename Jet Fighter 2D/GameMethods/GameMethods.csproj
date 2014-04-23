@@ -296,6 +296,30 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StartscreenFiXed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StartscreenFixedButtons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\playbuttonbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\playbuttonbutton1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HighscoreButtonbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HighscoreButtonbutton1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HighscoreButtonbutton2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quitbuttonbutton.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -63,9 +63,29 @@ namespace JetFighter2D {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap playbuttonbutton {
+            get {
+                object obj = ResourceManager.GetObject("playbuttonbutton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Startscreen {
             get {
                 object obj = ResourceManager.GetObject("Startscreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap StartscreenFiXed {
+            get {
+                object obj = ResourceManager.GetObject("StartscreenFiXed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
