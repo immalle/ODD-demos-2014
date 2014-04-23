@@ -13,7 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Web.UI;
-//using WiimoteLib;
+using WiimoteLib;
 
 namespace JetFighter2D
 {
@@ -42,6 +42,13 @@ namespace JetFighter2D
             //soundplayer
             Stream str = JetFighter2D.Resource2.Lost_Woods_Dubstep_Remix___Ephixa_Download_at_www;
             sp = new SoundPlayer(str);
+            
+            //connect Wiimote
+            GV.wm.Connect();
+            GV.wm.SetLEDs(true, false, true, false);
+
+            GV.wm.WiimoteChanged += wm_WiimoteChanged;
+            
         }
 
         //start game, move missiles TO DO
@@ -175,7 +182,7 @@ namespace JetFighter2D
                     GV.shield--;
 
                     //reset missile location
-                    missile1.obj.Location = new Point(GV.ranGen.Next(1, this.Width - 1), 1);
+                    missile1.obj.Location = new System.Drawing.Point(GV.ranGen.Next(1, this.Width - 1), 1);
                     GV.score--;
                     GV.counter2--;
                     GV.igScore.Text = "Score: " + GV.score.ToString();
@@ -194,7 +201,7 @@ namespace JetFighter2D
                     GV.shield--;
 
                     //reset missile location
-                    missile2.obj.Location = new Point(GV.ranGen.Next(1, this.Width - 1), 1);
+                    missile2.obj.Location = new System.Drawing.Point(GV.ranGen.Next(1, this.Width - 1), 1);
                     GV.score--;
                     GV.counter2--;
                     GV.igScore.Text = "Score: " + GV.score.ToString();
@@ -213,7 +220,7 @@ namespace JetFighter2D
                     GV.shield--;
 
                     //reset missile location
-                    missile3.obj.Location = new Point(GV.ranGen.Next(1, this.Width - 1), 1);
+                    missile3.obj.Location = new System.Drawing.Point(GV.ranGen.Next(1, this.Width - 1), 1);
                     GV.score--;
                     GV.counter2--;
                     GV.igScore.Text = "Score: " + GV.score.ToString();
@@ -232,7 +239,7 @@ namespace JetFighter2D
                     GV.shield--;
 
                     //reset missile location
-                    sMissile1.obj.Location = new Point(1, GV.ranGen.Next(1, this.Height - 1));
+                    sMissile1.obj.Location = new System.Drawing.Point(1, GV.ranGen.Next(1, this.Height - 1));
                     GV.score--;
                     GV.counter2--;
                     GV.igScore.Text = "Score: " + GV.score.ToString();
@@ -251,7 +258,7 @@ namespace JetFighter2D
                     GV.shield--;
 
                     //reset missile location
-                    sMissile2.obj.Location = new Point(1, GV.ranGen.Next(1, this.Height - 1));
+                    sMissile2.obj.Location = new System.Drawing.Point(1, GV.ranGen.Next(1, this.Height - 1));
                     GV.score--;
                     GV.counter2--;
                     GV.igScore.Text = "Score: " + GV.score.ToString();
@@ -289,7 +296,7 @@ namespace JetFighter2D
                     this.Controls.Remove(powerup1.obj);
                     GV.powerupSpawned = false;
 
-                    powerup1.obj.Location = new Point(GV.ranGen.Next(1, this.Width - 1), 1);
+                    powerup1.obj.Location = new System.Drawing.Point(GV.ranGen.Next(1, this.Width - 1), 1);
                 }
                 else if (powerup1.obj.Location.Y >= this.Height)
                 {
@@ -297,14 +304,14 @@ namespace JetFighter2D
                     this.Controls.Remove(powerup1.obj);
                     GV.powerupSpawned = false;
 
-                    powerup1.obj.Location = new Point(GV.ranGen.Next(1, this.Width - 1), 1);
+                    powerup1.obj.Location = new System.Drawing.Point(GV.ranGen.Next(1, this.Width - 1), 1);
                 }
             }
 
             //side
             if (sMissile1.obj.Location.X >= this.Width)
             {
-                sMissile1.obj.Location = new Point(1, GV.ranGen.Next(1, this.Height - 1));
+                sMissile1.obj.Location = new System.Drawing.Point(1, GV.ranGen.Next(1, this.Height - 1));
                 GV.score++;
                 GV.counter2++;
                 GV.igScore.Text = "Score: " + GV.score.ToString();
@@ -312,7 +319,7 @@ namespace JetFighter2D
 
             if (sMissile2.obj.Location.X >= this.Width)
             {
-                sMissile2.obj.Location = new Point(1, GV.ranGen.Next(1, this.Height - 1));
+                sMissile2.obj.Location = new System.Drawing.Point(1, GV.ranGen.Next(1, this.Height - 1));
                 GV.score++;
                 GV.counter2++;
                 GV.igScore.Text = "Score: " + GV.score.ToString();
@@ -321,7 +328,7 @@ namespace JetFighter2D
             //top
             if (missile1.obj.Location.Y >= this.Height)
             {
-                missile1.obj.Location = new Point(GV.ranGen.Next(1, this.Width - 1), 1);
+                missile1.obj.Location = new System.Drawing.Point(GV.ranGen.Next(1, this.Width - 1), 1);
                 GV.score++;
                 GV.counter2++;
                 GV.igScore.Text = "Score: " + GV.score.ToString();
@@ -329,7 +336,7 @@ namespace JetFighter2D
 
             if (missile2.obj.Location.Y >= this.Height)
             {
-                missile2.obj.Location = new Point(GV.ranGen.Next(1, this.Width - 1), 1);
+                missile2.obj.Location = new System.Drawing.Point(GV.ranGen.Next(1, this.Width - 1), 1);
                 GV.score++;
                 GV.counter2++;
                 GV.igScore.Text = "Score: " + GV.score.ToString();
@@ -337,7 +344,7 @@ namespace JetFighter2D
 
             if (missile3.obj.Location.Y >= this.Height)
             {
-                missile3.obj.Location = new Point(GV.ranGen.Next(1, this.Width - 1), 1);
+                missile3.obj.Location = new System.Drawing.Point(GV.ranGen.Next(1, this.Width - 1), 1);
                 GV.score++;
                 GV.counter2++;
                 GV.igScore.Text = "Score: " + GV.score.ToString();
@@ -419,7 +426,37 @@ namespace JetFighter2D
                     break;
             }
 
-            pbJet.Location = new Point(x, y);
+            pbJet.Location = new System.Drawing.Point(x, y);
+
+
+        }
+
+        void wm_WiimoteChanged(object sender, WiimoteChangedEventArgs e)
+        {
+            WiimoteState wms = e.WiimoteState;
+
+            PictureBox pbJet = sender as PictureBox;
+
+            int x = pbJet.Location.X;
+            int y = pbJet.Location.Y;
+
+            if (GV.wms.ButtonState.Left)
+            {
+                x -= GV.jetSpeed;
+            }
+            else if (GV.wms.ButtonState.Right)
+            {
+                x += GV.jetSpeed;
+            }
+            else if (GV.wms.ButtonState.Up)
+            {
+                y -= GV.jetSpeed;
+            }
+            else if (GV.wms.ButtonState.Down)
+            {
+                y += GV.jetSpeed;
+            }   
+            
         }
 
         // Countdown timer
@@ -488,7 +525,7 @@ namespace JetFighter2D
             this.BackColor = Color.DeepSkyBlue;
 
             //add score label
-            GV.igScore.Location = new Point(15, 15);
+            GV.igScore.Location = new System.Drawing.Point(15, 15);
             GV.igScore.AutoSize = true;
             GV.igScore.TextAlign = ContentAlignment.MiddleLeft;
             GV.igScore.ForeColor = Color.OrangeRed;
@@ -497,7 +534,7 @@ namespace JetFighter2D
             this.Controls.Add(GV.igScore);
 
             //add shieldlabel
-            GV.shieldLabel.Location = new Point(15, 50);
+            GV.shieldLabel.Location = new System.Drawing.Point(15, 50);
             GV.shieldLabel.AutoSize = true;
             GV.shieldLabel.TextAlign = ContentAlignment.MiddleCenter;
             GV.shieldLabel.ForeColor = Color.OrangeRed;
@@ -506,7 +543,7 @@ namespace JetFighter2D
             this.Controls.Add(GV.shieldLabel);
 
             //add jet
-            GV.jet.Location = new Point(GV.ranGen.Next(1, this.Width), this.Height - 200);
+            GV.jet.Location = new System.Drawing.Point(GV.ranGen.Next(1, this.Width), this.Height - 200);
             this.Controls.Add(GV.jet);
             GV.jet.BringToFront();
 
@@ -519,7 +556,7 @@ namespace JetFighter2D
             GV.cdLabel.TextAlign = ContentAlignment.MiddleCenter;
             GV.cdLabel.ForeColor = Color.OrangeRed;
             GV.cdLabel.Font = new Font("Microsoft Sans Serif", 72F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-            GV.cdLabel.Location = new Point((this.Width - GV.cdLabel.Width) / 2, (this.Height - GV.cdLabel.Height) / 2);
+            GV.cdLabel.Location = new System.Drawing.Point((this.Width - GV.cdLabel.Width) / 2, (this.Height - GV.cdLabel.Height) / 2);
             GV.cdLabel.Text = "Ready?";
             this.Controls.Add(GV.cdLabel);
             GV.cdLabel.BringToFront();
@@ -538,7 +575,7 @@ namespace JetFighter2D
 
             foreach (Highscore score in highScores)
             {
-                GV.sbLabel.Text = String.Format("{0}: {1} points", score.PlayerName, score.Score + Environment.NewLine);
+                GV.sbLabel.Text = String.Format("{0}: {1} System.Drawing.points", score.PlayerName, score.Score + Environment.NewLine);
             }
         }
 
@@ -546,10 +583,6 @@ namespace JetFighter2D
         {
             this.Close();
         }
-
-        
-
-        
 
         
 
@@ -599,6 +632,8 @@ namespace JetFighter2D
         public Label sbLabel = new Label();
         public Label shieldLabel = new Label();
         public Timer cdTimer = new Timer();
+        public Wiimote wm = new Wiimote();
+        public WiimoteState wms = new WiimoteState();
 
         public PictureBox jet;
 
@@ -606,6 +641,7 @@ namespace JetFighter2D
         public void setPropertiescdTimer()
         {
             cdTimer.Interval = 1000;
+            
         }
 
         //jet
@@ -615,7 +651,7 @@ namespace JetFighter2D
             jet.Size = new Size(140, 170);
             jet.Image = JetFighter2D.Resource6.FighterJetFixedHitbox;
             jet.SizeMode = PictureBoxSizeMode.Zoom;
-            jet.Location = new Point(x, y);
+            jet.Location = new System.Drawing.Point(x, y);
 
             return jet;
         }
@@ -661,21 +697,21 @@ namespace JetFighter2D
                     obj.Size = new Size(100, 50);
                     obj.Image = JetFighter2D.Resource12.sideMissile;
                     obj.SizeMode = PictureBoxSizeMode.Zoom;
-                    obj.Location = new Point(1, ranGen.Next(1, height));
+                    obj.Location = new System.Drawing.Point(1, ranGen.Next(1, height));
                 }
                 else if (top)
                 {
                     obj.Size = new Size(50, 100);
                     obj.Image = JetFighter2D.Resource7.missileFixedHitbox;
                     obj.SizeMode = PictureBoxSizeMode.Zoom;
-                    obj.Location = new Point(ranGen.Next(1, width), 1);//min max value exception
+                    obj.Location = new System.Drawing.Point(ranGen.Next(1, width), 1);//min max value exception
                 }
                 else
                 {
                     obj.Size = new Size(50, 50);
                     obj.Image = JetFighter2D.Resource5.powerup;
                     obj.SizeMode = PictureBoxSizeMode.Zoom;
-                    obj.Location = new Point(ranGen.Next(1, width), 1);
+                    obj.Location = new System.Drawing.Point(ranGen.Next(1, width), 1);
                 }
             }
         }
@@ -695,11 +731,11 @@ namespace JetFighter2D
 
             if (x)
             {
-                obj.Location = new Point(1, ranGen.Next(1, formheight));
+                obj.Location = new System.Drawing.Point(1, ranGen.Next(1, formheight));
             }
             else
             {
-                obj.Location = new Point(ranGen.Next(1, formwidth), 1);
+                obj.Location = new System.Drawing.Point(ranGen.Next(1, formwidth), 1);
             }
         }
 
@@ -716,19 +752,19 @@ namespace JetFighter2D
             }
             else
             {
-                obj.Location = new Point(obj.Location.X, obj.Location.Y + 1);
+                obj.Location = new System.Drawing.Point(obj.Location.X, obj.Location.Y + 1);
             }
         }
 
         //move functions
         private void moveToBottom()
         {
-            obj.Location = new Point(obj.Location.X, obj.Location.Y + GV.speed);
+            obj.Location = new System.Drawing.Point(obj.Location.X, obj.Location.Y + GV.speed);
         }
 
         private void moveToSide()
         {
-            obj.Location = new Point(obj.Location.X + GV.speed, obj.Location.Y);
+            obj.Location = new System.Drawing.Point(obj.Location.X + GV.speed, obj.Location.Y);
         }
     }
 }
