@@ -47,7 +47,7 @@ namespace JetFighter2D
             GV.wm.Connect();
             GV.wm.SetLEDs(true, false, true, false);
 
-            GV.wm.WiimoteChanged += wm_WiimoteChanged;
+            GV.wm.WiimoteChanged += new EventHandler<WiimoteChangedEventArgs>(wm_WiimoteChanged);
             
         }
 
