@@ -182,12 +182,11 @@ Partial Class frmBlackjack
         'lblComputerkaarten
         '
         Me.lblComputerkaarten.AutoSize = True
-        Me.lblComputerkaarten.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblComputerkaarten.Location = New System.Drawing.Point(533, 378)
         Me.lblComputerkaarten.Name = "lblComputerkaarten"
-        Me.lblComputerkaarten.Size = New System.Drawing.Size(42, 15)
+        Me.lblComputerkaarten.Size = New System.Drawing.Size(10, 13)
         Me.lblComputerkaarten.TabIndex = 15
-        Me.lblComputerkaarten.Text = "kaart 1"
+        Me.lblComputerkaarten.Text = " "
         '
         'frmBlackjack
         '

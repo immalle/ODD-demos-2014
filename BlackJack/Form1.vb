@@ -160,6 +160,14 @@
 
         End While
 
+        'Kaarten computer ook weergeven in een label
+        Dim strKaarten As String = ""
+        For i = 0 To (computerhand.Grootte - 1)
+            strKaarten = strKaarten + computerhand.HaalKaartOpPlaats(i).Soort.ToString + " " + computerhand.HaalKaartOpPlaats(i).Waarde.ToString + vbNewLine
+        Next
+
+        lblComputerkaarten.Text = strKaarten
+
         CheckKnoppenComp()
         btnNieuw.Enabled = False
         btnStop.Enabled = False
