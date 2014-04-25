@@ -47,7 +47,8 @@ namespace JetFighter2D
             GV.wm.Connect();
             GV.wm.SetLEDs(true, false, true, false);
 
-            GV.wm.WiimoteChanged += new EventHandler(wm_WiimoteChanged);
+            GV.wm.WiimoteChanged += new EventHandler<WiimoteChangedEventArgs>(wm_WiimoteChanged);
+
             
         }
 
@@ -431,7 +432,7 @@ namespace JetFighter2D
 
         }
 
-        void wm_WiimoteChanged(object sender, WiimoteChangedEventArgs e)
+        private void wm_WiimoteChanged(Object sender, WiimoteChangedEventArgs e)
         {
             WiimoteState wms = e.WiimoteState;
 
@@ -444,19 +445,20 @@ namespace JetFighter2D
             int x = GV.jet.Location.X;
             int y = GV.jet.Location.Y;
 
-            if (GV.wms.ButtonState.Left)
+
+            if (wms.ButtonState.Left)
             {
                 x -= GV.jetSpeed;
             }
-            else if (GV.wms.ButtonState.Right)
+            else if (wms.ButtonState.Right)
             {
                 x += GV.jetSpeed;
             }
-            else if (GV.wms.ButtonState.Up)
+            else if (wms.ButtonState.Up)
             {
                 y -= GV.jetSpeed;
             }
-            else if (GV.wms.ButtonState.Down)
+            else if (wms.ButtonState.Down)
             {
                 y += GV.jetSpeed;
             }   
@@ -637,8 +639,6 @@ namespace JetFighter2D
         public Label shieldLabel = new Label();
         public Timer cdTimer = new Timer();
         public Wiimote wm = new Wiimote();
-        
-        //public WiimoteState wms = new WiimoteState();
 
         public PictureBox jet;
 
