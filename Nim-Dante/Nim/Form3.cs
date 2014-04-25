@@ -17,12 +17,7 @@ namespace Nim
             InitializeComponent();
 
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        // Doorgaan naar Computer VS speler
         private void button1_Click(object sender, EventArgs e)
         {
             var f1 = new Form1();
@@ -47,14 +42,27 @@ namespace Nim
         private void button3_Click(object sender, EventArgs e)
         {
             Form2 frm2 = new Form2();
-            frm2.Show();
             
-            frm2.label3.Text = speler1.Text;
-            frm2.label4.Text = speler2.Text;
 
-            this.Visible = false;
+            if (speler1.Text == "")
+            {
+                MessageBox.Show("Geef alstublieft een naam.");                
+            }
+
+            else if (speler2.Text == "")
+                {
+                    MessageBox.Show("Geef alstublieft een naam.");
+                }
+            else
+            {
+                frm2.Show();
+                frm2.label3.Text = speler1.Text;
+                frm2.label4.Text = speler2.Text;
+
+                this.Visible = false;
+            }
         }
-
+        // Ga terug naar keuze menu
         private void Back_Click(object sender, EventArgs e)
         {
             button1.Visible = true;

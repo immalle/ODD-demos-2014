@@ -69,9 +69,8 @@
             this.label1.Size = new System.Drawing.Size(454, 32);
             this.label1.TabIndex = 2;
             this.label1.Text = "Kies uw spel";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter; 
+            //
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(186, 140);

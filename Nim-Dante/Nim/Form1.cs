@@ -127,10 +127,10 @@ namespace Nim
         // AI
         private void button4_Click(object sender, EventArgs e)
         {
-            
             int x = Convert.ToInt32(stapel1.Text);
             int y = Convert.ToInt32(stapel2.Text);
             int z = Convert.ToInt32(stapel3.Text);
+            
             if (x + y + z == 1)
             {
                 MessageBox.Show("Game over. Jij wint.");
