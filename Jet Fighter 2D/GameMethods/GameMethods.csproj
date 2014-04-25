@@ -102,6 +102,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource13.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resource14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource14.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resource2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -185,6 +190,10 @@
     <EmbeddedResource Include="Resource13.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource13.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource14.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource14.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resource2.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -320,6 +329,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\quitbuttonbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WiimoteLib.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

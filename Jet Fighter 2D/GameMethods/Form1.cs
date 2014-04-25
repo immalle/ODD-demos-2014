@@ -43,22 +43,19 @@ namespace JetFighter2D
             //soundplayer
             Stream str = JetFighter2D.Resource2.Lost_Woods_Dubstep_Remix___Ephixa_Download_at_www;
             sp = new SoundPlayer(str);
-<<<<<<< HEAD
 
             wm = new Wiimote();
             wm.Connect();
             wm.SetLEDs(true, false, true, false);
             wm.SetReportType(InputReport.Buttons, true);
-=======
             
             //connect Wiimote
             GV.wm.Connect();
             GV.wm.SetLEDs(true, false, true, false);
 
-            GV.wm.WiimoteChanged += new EventHandler<WiimoteChangedEventArgs>(wm_WiimoteChanged);
+            GV.wm.WiimoteChanged += new EventHandler<WiimoteChangedEventArgs>(Wiimote_changed);
 
-            
->>>>>>> d91cbfc1554cd81e6bd2836f7fb8f911cfa59d19
+           
         }
 
         //start game, move missiles TO DO
@@ -423,7 +420,6 @@ namespace JetFighter2D
             if (wm.WiimoteState.ButtonState.Right)
                 x += GV.jetSpeed;
 
-<<<<<<< HEAD
             if (wm.WiimoteState.ButtonState.Down)
                 y += GV.jetSpeed;
 
@@ -431,44 +427,6 @@ namespace JetFighter2D
                 y -= GV.jetSpeed;
 
             GV.jet.Location = new System.Drawing.Point(x, y);
-=======
-            pbJet.Location = new System.Drawing.Point(x, y);
-
-
-        }
-
-        private void wm_WiimoteChanged(Object sender, WiimoteChangedEventArgs e)
-        {
-            WiimoteState wms = e.WiimoteState;
-
-            //PictureBox pbJet = sender as PictureBox;
-            if (GV.jet == null)
-            {
-                return;
-            }
-
-            int x = GV.jet.Location.X;
-            int y = GV.jet.Location.Y;
-
-
-            if (wms.ButtonState.Left)
-            {
-                x -= GV.jetSpeed;
-            }
-            else if (wms.ButtonState.Right)
-            {
-                x += GV.jetSpeed;
-            }
-            else if (wms.ButtonState.Up)
-            {
-                y -= GV.jetSpeed;
-            }
-            else if (wms.ButtonState.Down)
-            {
-                y += GV.jetSpeed;
-            }   
-            
->>>>>>> d91cbfc1554cd81e6bd2836f7fb8f911cfa59d19
         }
 
         // Countdown timer
