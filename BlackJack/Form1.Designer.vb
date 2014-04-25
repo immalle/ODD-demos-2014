@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class frmBlackjack
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,20 +22,22 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnNieuw = New System.Windows.Forms.Button
-        Me.btnVorige = New System.Windows.Forms.Button
-        Me.btnVolgende = New System.Windows.Forms.Button
-        Me.btnvolgende2 = New System.Windows.Forms.Button
-        Me.btnvorige2 = New System.Windows.Forms.Button
-        Me.btnStop = New System.Windows.Forms.Button
-        Me.picSpelerTwee = New System.Windows.Forms.PictureBox
-        Me.picSpelerEen = New System.Windows.Forms.PictureBox
-        Me.lblPunten = New System.Windows.Forms.Label
-        Me.btnAfsluiten = New System.Windows.Forms.Button
-        Me.lblPtnComp = New System.Windows.Forms.Label
-        Me.lblPunten2 = New System.Windows.Forms.Label
-        Me.lblPtnComp2 = New System.Windows.Forms.Label
-        Me.btnnieuwgame = New System.Windows.Forms.Button
+        Me.btnNieuw = New System.Windows.Forms.Button()
+        Me.btnVorige = New System.Windows.Forms.Button()
+        Me.btnVolgende = New System.Windows.Forms.Button()
+        Me.btnvolgende2 = New System.Windows.Forms.Button()
+        Me.btnvorige2 = New System.Windows.Forms.Button()
+        Me.btnStop = New System.Windows.Forms.Button()
+        Me.picSpelerTwee = New System.Windows.Forms.PictureBox()
+        Me.picSpelerEen = New System.Windows.Forms.PictureBox()
+        Me.lblPunten = New System.Windows.Forms.Label()
+        Me.btnAfsluiten = New System.Windows.Forms.Button()
+        Me.lblPtnComp = New System.Windows.Forms.Label()
+        Me.lblPunten2 = New System.Windows.Forms.Label()
+        Me.lblPtnComp2 = New System.Windows.Forms.Label()
+        Me.btnnieuwgame = New System.Windows.Forms.Button()
+        Me.lblSpelerskaart = New System.Windows.Forms.Label()
+        Me.lblComputerkaarten = New System.Windows.Forms.Label()
         CType(Me.picSpelerTwee, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picSpelerEen, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -121,7 +123,7 @@ Partial Class Form1
         'lblPunten
         '
         Me.lblPunten.AutoSize = True
-        Me.lblPunten.Location = New System.Drawing.Point(86, 356)
+        Me.lblPunten.Location = New System.Drawing.Point(35, 334)
         Me.lblPunten.Name = "lblPunten"
         Me.lblPunten.Size = New System.Drawing.Size(0, 13)
         Me.lblPunten.TabIndex = 8
@@ -138,7 +140,7 @@ Partial Class Form1
         'lblPtnComp
         '
         Me.lblPtnComp.AutoSize = True
-        Me.lblPtnComp.Location = New System.Drawing.Point(644, 380)
+        Me.lblPtnComp.Location = New System.Drawing.Point(533, 334)
         Me.lblPtnComp.Name = "lblPtnComp"
         Me.lblPtnComp.Size = New System.Drawing.Size(0, 13)
         Me.lblPtnComp.TabIndex = 10
@@ -146,20 +148,18 @@ Partial Class Form1
         'lblPunten2
         '
         Me.lblPunten2.AutoSize = True
-        Me.lblPunten2.Location = New System.Drawing.Point(170, 356)
+        Me.lblPunten2.Location = New System.Drawing.Point(184, 334)
         Me.lblPunten2.Name = "lblPunten2"
         Me.lblPunten2.Size = New System.Drawing.Size(0, 13)
         Me.lblPunten2.TabIndex = 11
-        Me.lblPunten2.Visible = False
         '
         'lblPtnComp2
         '
         Me.lblPtnComp2.AutoSize = True
-        Me.lblPtnComp2.Location = New System.Drawing.Point(710, 380)
+        Me.lblPtnComp2.Location = New System.Drawing.Point(710, 334)
         Me.lblPtnComp2.Name = "lblPtnComp2"
         Me.lblPtnComp2.Size = New System.Drawing.Size(0, 13)
         Me.lblPtnComp2.TabIndex = 12
-        Me.lblPtnComp2.Visible = False
         '
         'btnnieuwgame
         '
@@ -170,11 +170,32 @@ Partial Class Form1
         Me.btnnieuwgame.Text = "Nieuw game"
         Me.btnnieuwgame.UseVisualStyleBackColor = True
         '
-        'Form1
+        'lblSpelerskaart
+        '
+        Me.lblSpelerskaart.AutoSize = True
+        Me.lblSpelerskaart.Location = New System.Drawing.Point(32, 378)
+        Me.lblSpelerskaart.Name = "lblSpelerskaart"
+        Me.lblSpelerskaart.Size = New System.Drawing.Size(10, 13)
+        Me.lblSpelerskaart.TabIndex = 14
+        Me.lblSpelerskaart.Text = " "
+        '
+        'lblComputerkaarten
+        '
+        Me.lblComputerkaarten.AutoSize = True
+        Me.lblComputerkaarten.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblComputerkaarten.Location = New System.Drawing.Point(533, 378)
+        Me.lblComputerkaarten.Name = "lblComputerkaarten"
+        Me.lblComputerkaarten.Size = New System.Drawing.Size(42, 15)
+        Me.lblComputerkaarten.TabIndex = 15
+        Me.lblComputerkaarten.Text = "kaart 1"
+        '
+        'frmBlackjack
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1077, 573)
+        Me.Controls.Add(Me.lblComputerkaarten)
+        Me.Controls.Add(Me.lblSpelerskaart)
         Me.Controls.Add(Me.btnnieuwgame)
         Me.Controls.Add(Me.lblPtnComp2)
         Me.Controls.Add(Me.lblPunten2)
@@ -189,8 +210,8 @@ Partial Class Form1
         Me.Controls.Add(Me.picSpelerTwee)
         Me.Controls.Add(Me.picSpelerEen)
         Me.Controls.Add(Me.btnNieuw)
-        Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Name = "frmBlackjack"
+        Me.Text = "Blackjack"
         CType(Me.picSpelerTwee, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picSpelerEen, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -211,5 +232,7 @@ Partial Class Form1
     Friend WithEvents lblPunten2 As System.Windows.Forms.Label
     Friend WithEvents lblPtnComp2 As System.Windows.Forms.Label
     Friend WithEvents btnnieuwgame As System.Windows.Forms.Button
+    Friend WithEvents lblSpelerskaart As System.Windows.Forms.Label
+    Friend WithEvents lblComputerkaarten As System.Windows.Forms.Label
 
 End Class

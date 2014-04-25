@@ -33,8 +33,8 @@
         _Hand.Clear()
     End Sub
 
-    Public Sub DrukAf(ByVal kaart As Kaart)
-        MessageBox.Show(kaart.Soort.ToString & " " & kaart.Waarde.ToString)
+    Public Sub DrukAf(ByVal kaart As Kaart, ByVal label As Label)
+        label.Text = kaart.Soort.ToString & " " & kaart.Waarde.ToString
     End Sub
 
     Public Function ShowImage(ByVal index As Integer) As Bitmap

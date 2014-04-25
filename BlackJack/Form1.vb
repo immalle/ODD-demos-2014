@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class frmBlackjack
     Public spelershand As New Hand
     Public pak As New Pak
     Public computerhand As New Hand
@@ -9,6 +9,7 @@
     Dim intPlaatsInPicBox As Integer
     Dim intPlaatsInPicBoxComp As Integer = 0
     Dim ptn2 As Integer
+    Dim computerkaart As Integer
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.Show()
@@ -16,7 +17,7 @@
         MessageBox.Show("Welkom bij blackjack, klik op nieuwe kaart om te beginnen")
 
     End Sub
-    
+
 
     Private Sub btnNieuw_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNieuw.Click
 
@@ -41,7 +42,7 @@
     End Sub
 
     Private Sub PuntenTelling(ByRef ptn As Integer, ByVal hand As Hand, ByVal aantalKaarten As Integer)
-        
+
 
         ptn += hand.HaalKaartOpPlaats(aantalKaarten).WaardeB
         ptn2 += hand.HaalKaartOpPlaats(aantalKaarten).WaardeB
@@ -72,7 +73,7 @@
                 Kapot()
 
             End If
-            End If
+        End If
     End Sub
 
     Private Sub Kapot()
@@ -154,12 +155,14 @@
             picSpelerTwee.Image = computerhand.ShowImage(intAantalComp)
 
             PuntenTelling(intPtnComp, computerhand, intAantalComp)
+
+
+
         End While
 
         CheckKnoppenComp()
         btnNieuw.Enabled = False
         btnStop.Enabled = False
-        MessageBox.Show(computerhand.Grootte.ToString)
 
     End Sub
 
@@ -174,7 +177,7 @@
         picSpelerEen.Image = spelershand.ShowImage(intAantal)
 
         'Messagebox voor de soort en de waarde van de nieuwe kaart
-        spelershand.DrukAf(spelershand.HaalKaartOpPlaats(intAantal))
+        spelershand.DrukAf(spelershand.HaalKaartOpPlaats(intAantal), lblSpelerskaart)
 
 
         'Tonen van punten
@@ -222,6 +225,7 @@
         intPlaatsInPicBoxComp = 0
         ptn2 = 0
         pak.SchudBoek()
+        btnnieuwgame.Show()
 
     End Sub
 End Class
