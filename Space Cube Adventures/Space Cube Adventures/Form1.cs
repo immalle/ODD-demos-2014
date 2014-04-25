@@ -232,14 +232,21 @@ namespace Space_Cube_Adventures
             {   
                 switch(intGunmode)
                 {
-                    case picLazer.Location = new System.Drawing.Point(picLazer.Location.X + 35, picLazer.Location.Y);
+                    case 0: 
+                        break;
+                    case 1: picLazer.Location = new System.Drawing.Point(picLazer.Location.X + 35, picLazer.Location.Y);
+                        break;
+                    case 2: picLazer.Location = new System.Drawing.Point(picLazer.Location.X + 35, picLazer.Location.Y);
+                            picLazer2.Location = new System.Drawing.Point(picLazer2.Location.X + 35, picLazer2.Location.Y);
+                        break;
+                    case 3: picLazer.Location = new System.Drawing.Point(picLazer.Location.X + 35, picLazer.Location.Y);
+                            picLazer2.Location = new System.Drawing.Point(picLazer2.Location.X + 35, picLazer2.Location.Y);
+                            picLazer3.Location = new System.Drawing.Point(picLazer3.Location.X + 35, picLazer3.Location.Y);
+                        break;
+
                 }
                 
-                if (picLazer.Location.X > this.Width)
-                {
-                    boolShot = false;
-                    Controls.Remove(picLazer);
-                }
+                
             }
 
             //POWERUPS
@@ -344,6 +351,17 @@ namespace Space_Cube_Adventures
             }
          }
 
+        void PewEndlap(PictureBox pic)
+        {
+            if (pic.Location.X > this.Width)
+            {
+                boolShot = false;
+                Controls.Remove(picLazer);
+                Controls.Remove(picLazer2);
+                Controls.Remove(picLazer3);
+            }
+        }
+
         int PowerupChance(int max)
         {
             Random r = new Random();
@@ -384,24 +402,10 @@ namespace Space_Cube_Adventures
                             Controls.Add(picPowerup);
                             boolPup2 = true;
                             intPowerupWaarde = 2;
-                            intPowerupVolgorde++;
-                        }
-                        break;
-                    case 3:
-                        //ULTRAMODE
-                        if (!boolPup && !boolPup2 && !boolPup3)
-                        {
-                            picPowerup = new PictureBox();
-                            picPowerup.Image = Space_Cube_Adventures.Properties.Resources.Powerup3;
-                            picPowerup.Location = new System.Drawing.Point(this.Width + 50, r.Next(115, this.Height - 250));
-                            picPowerup.Size = new Size(50, 50);
-                            Controls.Add(picPowerup);
-                            boolPup = true;
-                            intPowerupWaarde = 3;
                             intPowerupVolgorde = 1;
                         }
                         break;
-                
+                    
                 }
                 
             }
@@ -514,12 +518,12 @@ namespace Space_Cube_Adventures
                     case 2:
                             
                             picLazer = new PictureBox();
-                            picLazer.Location = new System.Drawing.Point(picPlayer.Location.X + (intPlayerSize / 2), picPlayer.Location.Y + (intPlayerSize / 2));
+                            picLazer.Location = new System.Drawing.Point(picPlayer.Location.X + (intPlayerSize / 2), picPlayer.Location.Y + (intPlayerSize / 2) + 15);
                             picLazer.Image = Space_Cube_Adventures.Properties.Resources.fireball;
                             picLazer.Size = new System.Drawing.Size(30, 21);
                             picLazer.SizeMode = PictureBoxSizeMode.Zoom;
                             picLazer2 = new PictureBox();
-                            picLazer2.Location = new System.Drawing.Point(picPlayer.Location.X + (intPlayerSize / 2), picPlayer.Location.Y + (intPlayerSize / 2));
+                            picLazer2.Location = new System.Drawing.Point(picPlayer.Location.X + (intPlayerSize / 2), picPlayer.Location.Y + (intPlayerSize / 2) + 30);
                             picLazer2.Image = Space_Cube_Adventures.Properties.Resources.fireball;
                             picLazer2.Size = new System.Drawing.Size(30, 21);
                             picLazer2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -530,17 +534,17 @@ namespace Space_Cube_Adventures
 
                     case 3:
                             picLazer = new PictureBox();
-                            picLazer.Location = new System.Drawing.Point(picPlayer.Location.X + (intPlayerSize / 2), picPlayer.Location.Y + (intPlayerSize / 2));
+                            picLazer.Location = new System.Drawing.Point(picPlayer.Location.X + (intPlayerSize / 2), picPlayer.Location.Y + (intPlayerSize / 2) + 10);
                             picLazer.Image = Space_Cube_Adventures.Properties.Resources.fireball;
                             picLazer.Size = new System.Drawing.Size(30, 21);
                             picLazer.SizeMode = PictureBoxSizeMode.Zoom;
                             picLazer2 = new PictureBox();
-                            picLazer2.Location = new System.Drawing.Point(picPlayer.Location.X + (intPlayerSize / 2), picPlayer.Location.Y + (intPlayerSize / 2));
+                            picLazer2.Location = new System.Drawing.Point(picPlayer.Location.X + (intPlayerSize / 2), picPlayer.Location.Y + (intPlayerSize / 2) + 20);
                             picLazer2.Image = Space_Cube_Adventures.Properties.Resources.fireball;
                             picLazer2.Size = new System.Drawing.Size(30, 21);
                             picLazer2.SizeMode = PictureBoxSizeMode.Zoom;
                             picLazer3 = new PictureBox();
-                            picLazer3.Location = new System.Drawing.Point(picPlayer.Location.X + (intPlayerSize / 2), picPlayer.Location.Y + (intPlayerSize / 2));
+                            picLazer3.Location = new System.Drawing.Point(picPlayer.Location.X + (intPlayerSize / 2), picPlayer.Location.Y + (intPlayerSize / 2) + 30);
                             picLazer3.Image = Space_Cube_Adventures.Properties.Resources.fireball;
                             picLazer3.Size = new System.Drawing.Size(30, 21);
                             picLazer3.SizeMode = PictureBoxSizeMode.Zoom;
