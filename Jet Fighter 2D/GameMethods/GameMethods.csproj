@@ -60,7 +60,11 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="WiimoteLib">
+<<<<<<< HEAD
+      <HintPath>C:\Users\sander.forrer\Google Drive\WiimoteLib.dll</HintPath>
+=======
       <HintPath>C:\Users\Jens\Desktop\WiimotLib_1.7\WiimoteLib.dll</HintPath>
+>>>>>>> d91cbfc1554cd81e6bd2836f7fb8f911cfa59d19
     </Reference>
   </ItemGroup>
   <ItemGroup>

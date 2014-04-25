@@ -22,6 +22,7 @@ namespace JetFighter2D
     {
         //game vars
         SoundPlayer sp;
+        Wiimote wm;
 
         //Classes
         List<Highscore> highScores = new List<Highscore>();
@@ -42,6 +43,13 @@ namespace JetFighter2D
             //soundplayer
             Stream str = JetFighter2D.Resource2.Lost_Woods_Dubstep_Remix___Ephixa_Download_at_www;
             sp = new SoundPlayer(str);
+<<<<<<< HEAD
+
+            wm = new Wiimote();
+            wm.Connect();
+            wm.SetLEDs(true, false, true, false);
+            wm.SetReportType(InputReport.Buttons, true);
+=======
             
             //connect Wiimote
             GV.wm.Connect();
@@ -50,6 +58,7 @@ namespace JetFighter2D
             GV.wm.WiimoteChanged += new EventHandler<WiimoteChangedEventArgs>(wm_WiimoteChanged);
 
             
+>>>>>>> d91cbfc1554cd81e6bd2836f7fb8f911cfa59d19
         }
 
         //start game, move missiles TO DO
@@ -385,48 +394,44 @@ namespace JetFighter2D
 
             //set properties jet
             GV.CreateJet(this.Width / 2, this.Height - 200);
-            GV.jet.PreviewKeyDown += new PreviewKeyDownEventHandler(pbJet_PreviewKeyDown);
 
             //set properties countdown timer
             GV.setPropertiescdTimer();
             GV.cdTimer.Tick += new EventHandler(cdTimer_Tick);
 
             //Objects
-            missile1 = new moveObj(this.Height, this.Width, false, true, false, 5);
-            missile2 = new moveObj(this.Height, this.Width, false, true, false, 6);
-            missile3 = new moveObj(this.Height, this.Width, false, true, false, 2);
-            sMissile1 = new moveObj(this.Height, this.Width, true, false, false, 4);
-            sMissile2 = new moveObj(this.Height, this.Width, true, false, false, 5);
-            powerup1 = new moveObj(this.Height, this.Width, false, false, true, 3);
+            missile1 = new moveObj(this.Height, this.Width, false, true, false, GV.ranGen.Next(4, 10));
+            missile2 = new moveObj(this.Height, this.Width, false, true, false, GV.ranGen.Next(4, 10));
+            missile3 = new moveObj(this.Height, this.Width, false, true, false, GV.ranGen.Next(4, 10));
+            sMissile1 = new moveObj(this.Height, this.Width, true, false, false, GV.ranGen.Next(4, 10));
+            sMissile2 = new moveObj(this.Height, this.Width, true, false, false, GV.ranGen.Next(4, 10));
+            powerup1 = new moveObj(this.Height, this.Width, false, false, true, GV.ranGen.Next(4, 10));
 
             GV.formHeight = this.Height;
             GV.formWidth = this.Width;
         }
 
         //Jet controls event
-        private void pbJet_PreviewKeyDown(Object sender, PreviewKeyDownEventArgs e)
+        private void Wiimote_changed(Object sender, EventArgs e)
         {
-            PictureBox pbJet = sender as PictureBox;
+            int x = GV.jet.Location.X;
+            int y = GV.jet.Location.Y;
 
-            int x = pbJet.Location.X;
-            int y = pbJet.Location.Y;
+            if (wm.WiimoteState.ButtonState.Left)
+                x -= GV.jetSpeed;
 
-            switch (e.KeyCode)
-            {
-                case Keys.Left:
-                    x -= GV.jetSpeed;
-                    break;
-                case Keys.Right:
-                    x += GV.jetSpeed;
-                    break;
-                case Keys.Up:
-                    y -= GV.jetSpeed;
-                    break;
-                case Keys.Down:
-                    y += GV.jetSpeed;
-                    break;
-            }
+            if (wm.WiimoteState.ButtonState.Right)
+                x += GV.jetSpeed;
 
+<<<<<<< HEAD
+            if (wm.WiimoteState.ButtonState.Down)
+                y += GV.jetSpeed;
+
+            if (wm.WiimoteState.ButtonState.Up)
+                y -= GV.jetSpeed;
+
+            GV.jet.Location = new System.Drawing.Point(x, y);
+=======
             pbJet.Location = new System.Drawing.Point(x, y);
 
 
@@ -463,6 +468,7 @@ namespace JetFighter2D
                 y += GV.jetSpeed;
             }   
             
+>>>>>>> d91cbfc1554cd81e6bd2836f7fb8f911cfa59d19
         }
 
         // Countdown timer
@@ -552,6 +558,8 @@ namespace JetFighter2D
             GV.jet.Location = new System.Drawing.Point(GV.ranGen.Next(1, this.Width), this.Height - 200);
             this.Controls.Add(GV.jet);
             GV.jet.BringToFront();
+
+            wm.WiimoteChanged += new EventHandler<WiimoteChangedEventArgs>(Wiimote_changed);
 
             //set gameover to false;
 
