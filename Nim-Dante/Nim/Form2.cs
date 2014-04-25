@@ -12,14 +12,14 @@ namespace Nim
 {
     public partial class Form2 : Form
     {
-        Form3 form;
+        Form3 form3;
         public string S1;
         public string S2;
 
         public Form2()
         {
             InitializeComponent();
-            form = new Form3();
+            form3 = new Form3();
         }
 
         //switch naam speler
@@ -101,7 +101,7 @@ namespace Nim
         //Quit
         private void button5_Click(object sender, EventArgs e)
         {
-            form.Show();
+            form3.Show();
             this.Close();
         }
         //Game
