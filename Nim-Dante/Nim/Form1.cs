@@ -86,6 +86,7 @@ namespace Nim
                 {
                     MessageBox.Show("Voer een getal in beide balken alstublieft.");
                 }
+                
                 else
                 {
 
@@ -94,51 +95,82 @@ namespace Nim
 
                     if (x == 1)
                     {
-                        int res = Convert.ToInt32(stapel1.Text) - y;
-                        if (res < 0)
-                        {
-                            res = 0;
-                        }
                         if (Convert.ToInt32(stapel1.Text) == 0)
                         {
                             MessageBox.Show("Gebruik een andere stapel, deze is leeg.");
                         }
-                        stapel1.Text = Convert.ToString(res);
+
+                        else
+                        {
+                            int res = Convert.ToInt32(stapel1.Text) - y;
+                            if (res < 0)
+                            {
+                                res = 0;
+
+                            }
+                            stapel1.Text = Convert.ToString(res);
+
+                            button4.Visible = true;
+                            button3.Visible = false;
+                            textBox1.Visible = false;
+                            textBox2.Visible = false;
+                            label1.Visible = false;
+                            label2.Visible = false;
+                        }
 
                     }
                     else if (x == 2)
                     {
-                        int res = Convert.ToInt32(stapel2.Text) - y;
-                        if (res < 0)
-                        {
-                            res = 0;
-                        }
                         if (Convert.ToInt32(stapel2.Text) == 0)
                         {
                             MessageBox.Show("Gebruik een andere stapel, deze is leeg.");
                         }
-                        stapel2.Text = Convert.ToString(res);
+
+                        else
+                        {
+                            int res = Convert.ToInt32(stapel2.Text) - y;
+                            if (res < 0)
+                            {
+                                res = 0;
+                                
+                            }
+                            stapel2.Text = Convert.ToString(res);
+
+                            button4.Visible = true;
+                            button3.Visible = false;
+                            textBox1.Visible = false;
+                            textBox2.Visible = false;
+                            label1.Visible = false;
+                            label2.Visible = false;
+                        }
+                        
+                        
                     }
                     else if (x == 3)
                     {
-                        int res = Convert.ToInt32(stapel3.Text) - y;
-                        if (res < 0)
-                        {
-                            res = 0;
-                        }
                         if (Convert.ToInt32(stapel3.Text) == 0)
                         {
                             MessageBox.Show("Gebruik een andere stapel, deze is leeg.");
                         }
-                        stapel3.Text = Convert.ToString(res);
-                    }
 
-                    button4.Visible = true;
-                    button3.Visible = false;
-                    textBox1.Visible = false;
-                    textBox2.Visible = false;
-                    label1.Visible = false;
-                    label2.Visible = false;
+                        else
+                        {
+                            int res = Convert.ToInt32(stapel3.Text) - y;
+                            if (res < 0)
+                            {
+                                res = 0;
+
+                            }
+                            stapel3.Text = Convert.ToString(res);
+
+                            button4.Visible = true;
+                            button3.Visible = false;
+                            textBox1.Visible = false;
+                            textBox2.Visible = false;
+                            label1.Visible = false;
+                            label2.Visible = false;
+                        }
+                    }                    
                 }
             }
         }
@@ -152,139 +184,93 @@ namespace Nim
             if (x + y + z == 1)
             {
                 MessageBox.Show("Game over. Jij wint.");
-
-                FormClosed += (o, a) => new Form1().ShowDialog();
-
-                Hide();
-                Close();
+                Game_over();
             }
+
             else
             {
-                    if (z == 0)
+                if (z == 0)
+                {
+                    Random rndgen = new Random();
+                    int stapelnr = rndgen.Next(1, 2);
+
+                    if (stapelnr == 1)
                     {
-                        Random rndgen = new Random();
-                        int stapelnr = rndgen.Next(1, 2);
-
-                        if (stapelnr == 1)
-                        {
-                            int afname = rndgen.Next(1, Convert.ToInt32(stapel1.Text) + 1);
-
-                            int res = Convert.ToInt32(stapel1.Text) - afname;
-                            if (res < 1)
-                            {
-                                res = 1;
-                            }
-                            stapel1.Text = Convert.ToString(res);
-                        }
-                        if (stapelnr == 2)
-                        {
-                            int afname = rndgen.Next(1, Convert.ToInt32(stapel1.Text) + 1);
-
-                            int res = Convert.ToInt32(stapel2.Text) - afname;
-                            if (res < 1)
-                            {
-                                res = 1;
-                            }
-                            stapel2.Text = Convert.ToString(res);
-                        }
+                        ZetComputer(rndgen, stapel1);
                     }
-                    if (y == 0)
+                    if (stapelnr == 2)
                     {
-                        Random rndgen = new Random();
-                        int stapelnr = rndgen.Next(1, 2);
-
-                        if (stapelnr == 1)
-                        {
-                            int afname = rndgen.Next(1, Convert.ToInt32(stapel1.Text) + 1);
-
-                            int res = Convert.ToInt32(stapel1.Text) - afname;
-                            if (res < 1)
-                            {
-                                res = 1;
-                            }
-                            stapel1.Text = Convert.ToString(res);
-                        }
-                        if (stapelnr == 2)
-                        {
-                            int afname = rndgen.Next(1, Convert.ToInt32(stapel3.Text) + 1);
-
-                            int res = Convert.ToInt32(stapel3.Text) - afname;
-                            if (res < 1)
-                            {
-                                res = 1;
-                            }
-                            stapel3.Text = Convert.ToString(res);
-                        }
-
+                        ZetComputer(rndgen, stapel2);
                     }
-                    if (x == 0)
+                }
+                if (y == 0)
+                {
+                    Random rndgen = new Random();
+                    int stapelnr = rndgen.Next(1, 2);
+
+                    if (stapelnr == 1)
                     {
-                        Random rndgen = new Random();
-                        int stapelnr = rndgen.Next(1, 3);
-
-                        if (stapelnr == 1)
-                        {
-                            int afname = rndgen.Next(1, Convert.ToInt32(stapel2.Text) + 1);
-
-                            int res = Convert.ToInt32(stapel2.Text) - afname;
-                            if (res < 1)
-                            {
-                                res = 1;
-                            }
-                            stapel2.Text = Convert.ToString(res);
-                        }
-                        else if (stapelnr == 2)
-                        {
-                            int afname = rndgen.Next(1, Convert.ToInt32(stapel3.Text) + 1);
-
-                            int res = Convert.ToInt32(stapel3.Text) - afname;
-                            if (res < 1)
-                            {
-                                res = 1;
-                            }
-                            stapel3.Text = Convert.ToString(res);
-                        }
+                        ZetComputer(rndgen, stapel1);
                     }
-                    else if (!(x + y + z == 0))
+                    if (stapelnr == 2)
                     {
-                        Random rndgen = new Random();
-                        int stapelnr = rndgen.Next(1, 3);
-
-                        if (stapelnr == 1)
-                        {
-                            int afname = rndgen.Next(1, Convert.ToInt32(stapel1.Text) + 1);
-
-                            int res = Convert.ToInt32(stapel1.Text) - afname;
-                            if (res < 1)
-                            {
-                                res = 1;
-                            }
-                            stapel1.Text = Convert.ToString(res);
-                        }
-                        if (stapelnr == 2)
-                        {
-                            int afname = rndgen.Next(1, Convert.ToInt32(stapel2.Text) + 1);
-
-                            int res = Convert.ToInt32(stapel2.Text) - afname;
-                            if (res < 1)
-                            {
-                                res = 1;
-                            }
-                            stapel2.Text = Convert.ToString(res);
-                        }
-                        if (stapelnr == 3)
-                        {
-                            int afname = rndgen.Next(1, Convert.ToInt32(stapel3.Text) + 1);
-
-                            int res = Convert.ToInt32(stapel3.Text) - afname;
-                            if (res < 1)
-                            {
-                                res = 1;
-                            }
-                            stapel3.Text = Convert.ToString(res);
-                        }
+                        ZetComputer(rndgen, stapel3);
                     }
-                
+
+                }
+                if (x == 0)
+                {
+                    Random rndgen = new Random();
+                    int stapelnr = rndgen.Next(1, 3);
+
+                    if (stapelnr == 1)
+                    {
+                        ZetComputer(rndgen, stapel2);
+                    }
+                    else if (stapelnr == 2)
+                    {
+                        ZetComputer(rndgen, stapel3);
+                    }
+                }
+                else if (!(x + y + z == 0))
+                {
+                    Random rndgen = new Random();
+                    int stapelnr = rndgen.Next(1, 3);
+
+                    if (stapelnr == 1)
+                    {
+                        ZetComputer(rndgen, stapel1);
+                    }
+                    if (stapelnr == 2)
+                    {
+                        ZetComputer(rndgen, stapel2);
+                    }
+                    if (stapelnr == 3)
+                    {
+                        ZetComputer(rndgen, stapel3);
+                    }
+                }
+
+                if (x + y == 0)
+                {
+                    stapel3.Text = "1";
+                    MessageBox.Show("Game over, computer wint");
+                    Game_over();
+                }
+
+                if (x + z == 0)
+                {
+                    stapel2.Text = "1";
+                    MessageBox.Show("Game over, computer wint");
+                    Game_over();
+                }
+                if (y + z == 0)
+                {
+                    stapel1.Text = "1";
+                    MessageBox.Show("Game over, computer wint");
+                    Game_over();
+                }
+
                 button4.Visible = false;
                 button3.Visible = true;
                 textBox1.Visible = true;
@@ -292,9 +278,20 @@ namespace Nim
                 label1.Visible = true;
                 label2.Visible = true;
             }
-
         }
-        // Quit knop
+        // zet computer
+        private void ZetComputer(Random rndgen, Label stapelNr)
+        {
+            int afname = rndgen.Next(1, Convert.ToInt32(stapel1.Text) + 1);
+
+            int res = Convert.ToInt32(stapelNr.Text) - afname;
+            if (res < 1)
+            {
+                res = 1;
+            }
+            stapelNr.Text = Convert.ToString(res);
+        }
+        // quit knop
         private void Quit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -303,48 +300,11 @@ namespace Nim
         // Game over
         private void Game_over()
         {
-            if (x + y + z == 1)
-            {
-                MessageBox.Show("Game over. Jij wint.");
+            FormClosed += (o, a) => new Form1().ShowDialog();
 
-                FormClosed += (o, a) => new Form1().ShowDialog();
+            Hide();
+            Close();
 
-                Hide();
-                Close();
-            }
-            else
-            {
-                if (x + y == 0)
-                {
-                    stapel3.Text = "1";
-                    MessageBox.Show("Game over, computer wint");
-
-                    FormClosed += (o, a) => new Form1().ShowDialog();
-
-                    Hide();
-                    Close();
-                }
-                if (x + z == 0)
-                {
-                    stapel2.Text = "1";
-                    MessageBox.Show("Game over, computer wint");
-
-                    FormClosed += (o, a) => new Form1().ShowDialog();
-
-                    Hide();
-                    Close();
-                }
-                if (y + z == 0)
-                {
-                    stapel1.Text = "1";
-                    MessageBox.Show("Game over, computer wint");
-
-                    FormClosed += (o, a) => new Form1().ShowDialog();
-
-                    Hide();
-                    Close();
-                }
-            }
         }
     }
 }
